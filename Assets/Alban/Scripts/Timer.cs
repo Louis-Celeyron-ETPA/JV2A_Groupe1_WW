@@ -1,18 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Timer : MonoBehaviour
+namespace Alban
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Timer : MonoBehaviour
     {
-        
-    }
+        public float timeRemaining = 10;
+        public bool timeIsRunning = false;
+        public Text timeText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            timeIsRunning = true;
+        }
+
+        void Update()
+        {
+            if (timeIsRunning == true)
+            {
+                if (timeRemaining > 0)
+                {
+                    timeRemaining -= Time.deltaTime;
+                }
+
+                else if (timeRemaining <= 0)
+                {
+                    Debug.Log("Victoire !");
+                    timeRemaining = 0;
+                    timeIsRunning = false;
+                }
+            }
+        }
+        void DisplayTime(float timeToDisplay)
+        {
+            timeToDisplay += 1;
+            float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+            timeText.text = string.Format("{0:00}", seconds);
+            DisplayTime(timeRemaining);
+        }
     }
 }

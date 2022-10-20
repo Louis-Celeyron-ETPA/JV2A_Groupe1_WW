@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace Alban{
     public class Requins : MonoBehaviour
     {
@@ -10,6 +11,7 @@ namespace Alban{
         float mooveSpeed = 5;
         public Transform myTransform;
         public Rigidbody rgbd;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -23,11 +25,25 @@ namespace Alban{
             rgbd.MovePosition(transform.position + (transform.forward * mooveSpeed * Time.deltaTime));
             //myTransform.Translate(Vector3.forward * mooveSpeed * Time.deltaTime);
         }
+
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player")
+            var timer = other.GetComponent<Timer>();
+            if(timer != null)
             {
-                Debug.LogError("T mort");
+
+                float timeRemaining = timer.timeRemaining;
+
+                if (other.tag == "Player" && timeRemaining >= 0)
+                {
+                    Debug.LogError("T mort");
+                }
+
+                else if (other.tag == "Player" && timeRemaining <= 0)
+                {
+                    Debug.LogError("Parfait !");
+                }
             }
         }
     }
