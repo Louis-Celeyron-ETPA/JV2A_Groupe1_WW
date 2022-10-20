@@ -1,28 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class Victoire : MonoBehaviour
+namespace Hugo
 {
-    public Tex text;
-    // Start is called before the first frame update
-    void Start()
+    public class Victoire : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Joueur joueurQuiMeTraverse = other.GetComponent<Joueur>();
-        if (joueurQuiMeTraverse != null)
+        public TextMeshPro textVictoire;
+        // Start is called before the first frame update
+        void Start()
         {
-          
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Joueur joueurQuiMeTraverse = other.GetComponent<Joueur>();
+            if (joueurQuiMeTraverse != null)
+            {
+                textVictoire.text = "Victoire!";
+            }
         }
     }
 }
+
+
