@@ -1,24 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class Bouton : MonoBehaviour
 {
-    public bool Boutoon = false;
+	public Button yourButton;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	void Start()
+	{
+        Button btn = yourButton.GetComponent<Button>();
+		btn.onClick.AddListener(TaskOnClick);
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Boutoon = true;
-            Debug.LogError("perdu !");
-        }
-    }
+	void TaskOnClick()
+	{
+		Debug.Log("Perdu !");
+	}
 }
