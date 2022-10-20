@@ -4,11 +4,8 @@ using UnityEngine;
 
 namespace Gabriel
 {
-    public class Lancer : MonoBehaviour
-
+    public class Placer : MonoBehaviour
     {
-        public Transform boule_de_neige;
-        public float speed = 0.5f;
         // Start is called before the first frame update
         void Start()
         {
@@ -18,10 +15,7 @@ namespace Gabriel
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKey(KeyCode.Space) == true)
-            {
-                boule_de_neige.position = boule_de_neige.position + Vector3.right * speed;
-            }
+
         }
     }
 }
