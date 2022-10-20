@@ -19,11 +19,11 @@ public class Alliou_Maelle_Deplacement2 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Z) == true)
         {
-            thierry.position = thierry.position + Vector3.left;
+            thierry.position = thierry.position + Vector3.forward;
         }
         if (Input.GetKey(KeyCode.S) == true)
         {
-            thierry.position = thierry.position + Vector3.right;
+            thierry.position = thierry.position + Vector3.back;
         }
         if (Input.GetKey(KeyCode.Q) == true)
         {
