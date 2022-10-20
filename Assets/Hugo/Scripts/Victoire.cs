@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Victoire : MonoBehaviour
 {
+    public Tex text;
     // Start is called before the first frame update
     void Start()
     {
