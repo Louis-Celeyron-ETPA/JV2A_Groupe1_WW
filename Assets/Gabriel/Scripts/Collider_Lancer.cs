@@ -19,11 +19,16 @@ public class Collider_Lancer : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Boule_neige"))
+        
+        print("COLISION");
+        if (other.gameObject.CompareTag("Boule_neige"))
         {
-            Destroy(gameObject);
+            Destroy(other.gameObject);
+
+            GetComponent<Renderer>().material.color = colors[0];
         }
 
     }

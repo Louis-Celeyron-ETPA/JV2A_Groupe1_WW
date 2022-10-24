@@ -408,12 +408,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461010773}
   m_LocalRotation: {x: -0.70678467, y: 0.70678467, z: -0.02134265, w: 0.02134265}
-  m_LocalPosition: {x: 8.3084, y: 1.18339, z: -2.5182}
-  m_LocalScale: {x: 0.4477324, y: 0.5557328, z: 0.39307156}
+  m_LocalPosition: {x: 7.611292, y: -2.7904172, z: -3.1682363}
+  m_LocalScale: {x: 0.4477324, y: 0.5557327, z: 0.39307156}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 176.541, z: -90}
 --- !u!1 &576412677
 GameObject:
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 576412679}
   - component: {fileID: 576412678}
   m_Layer: 0
-  m_Name: Sphere (6)
+  m_Name: EyeL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -505,12 +505,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576412677}
   m_LocalRotation: {x: -0, y: 0.99954444, z: -0, w: 0.030183395}
-  m_LocalPosition: {x: 7.8992, y: 4.117, z: -2.408}
-  m_LocalScale: {x: 0.23479226, y: 0.23479226, z: 0.23479226}
+  m_LocalPosition: {x: 7.202091, y: 0.14319277, z: -3.0580368}
+  m_LocalScale: {x: 0.23479234, y: 0.23479228, z: 0.23479234}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 176.541, z: 0}
 --- !u!1 &583053830
 GameObject:
@@ -608,6 +608,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &684998801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684998802}
+  m_Layer: 0
+  m_Name: PetitPingouin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &684998802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684998801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6587088, y: 3.9738073, z: 1.2782364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1092073635}
+  - {fileID: 461010777}
+  - {fileID: 1124116788}
+  - {fileID: 1002664253}
+  - {fileID: 921541458}
+  - {fileID: 576412681}
+  - {fileID: 1855743977}
+  - {fileID: 2001071333}
+  - {fileID: 951003355}
+  - {fileID: 2125819844}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &870862298
 GameObject:
@@ -797,12 +838,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921541454}
   m_LocalRotation: {x: -0, y: 0.99954444, z: -0, w: 0.030183395}
-  m_LocalPosition: {x: 8.5895, y: 3.9281, z: -2.1286}
+  m_LocalPosition: {x: 7.892392, y: -0.045707226, z: -2.7786365}
   m_LocalScale: {x: 1.4646139, y: 1.4646139, z: 1.4646139}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 176.541, z: 0}
 --- !u!1 &951003351
 GameObject:
@@ -895,12 +936,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951003351}
   m_LocalRotation: {x: 0.0050667846, y: 0.98536044, z: -0.16779104, w: 0.029754378}
-  m_LocalPosition: {x: 8.5971, y: 2.4342, z: -1.1611}
-  m_LocalScale: {x: 0.54662526, y: 1.0981967, z: 0.30417687}
+  m_LocalPosition: {x: 7.899992, y: -1.5396073, z: -1.8111365}
+  m_LocalScale: {x: 0.54662526, y: 1.0981969, z: 0.3041768}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 19.328, y: 176.541, z: 0}
 --- !u!1 &1002664249
 GameObject:
@@ -914,6 +955,8 @@ GameObject:
   - component: {fileID: 1002664252}
   - component: {fileID: 1002664251}
   - component: {fileID: 1002664250}
+  - component: {fileID: 1002664254}
+  - component: {fileID: 1002664255}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Untagged
@@ -992,13 +1035,45 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002664249}
   m_LocalRotation: {x: -0, y: 0.99954444, z: -0, w: 0.030183395}
-  m_LocalPosition: {x: 8.5092, y: 3.9281, z: -2.1334}
+  m_LocalPosition: {x: 7.812092, y: -0.045707226, z: -2.7834363}
   m_LocalScale: {x: 1.4646139, y: 1.4646139, z: 1.4646139}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 176.541, z: 0}
+--- !u!114 &1002664254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002664249}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a09d037fb84b14d949efeb3270d9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boule_de_neige: {fileID: 1002664249}
+  collid: {fileID: 1449348368}
+  colors:
+  - {r: 1, g: 0, b: 0, a: 0}
+--- !u!54 &1002664255
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002664249}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1092073631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,12 +1165,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092073631}
   m_LocalRotation: {x: -0.70678467, y: 0.70678467, z: -0.02134265, w: 0.02134265}
-  m_LocalPosition: {x: 8.2572, y: 1.18339, z: -1.6688}
-  m_LocalScale: {x: 0.4477324, y: 0.5557328, z: 0.39307156}
+  m_LocalPosition: {x: 7.560092, y: -2.7904172, z: -2.3188365}
+  m_LocalScale: {x: 0.4477324, y: 0.5557327, z: 0.39307156}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 176.541, z: -90}
 --- !u!1 &1124116784
 GameObject:
@@ -1188,12 +1263,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124116784}
   m_LocalRotation: {x: -0, y: 0.99954444, z: -0, w: 0.030183395}
-  m_LocalPosition: {x: 8.6025, y: 2.4531, z: -2.0999}
-  m_LocalScale: {x: 1.1805431, y: 1.4646139, z: 1.3102583}
+  m_LocalPosition: {x: 7.9053917, y: -1.5207074, z: -2.7499366}
+  m_LocalScale: {x: 1.1805432, y: 1.4646139, z: 1.3102583}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 176.541, z: 0}
 --- !u!1 &1449348366
 GameObject:
@@ -1210,7 +1285,7 @@ GameObject:
   - component: {fileID: 1449348367}
   m_Layer: 0
   m_Name: Sphere (8)
-  m_TagString: Untagged
+  m_TagString: Boule_neige
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1228,7 +1303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boule_de_neige: {fileID: 1449348371}
-  speed: 0.4
+  speed: 0.2
 --- !u!135 &1449348368
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1237,7 +1312,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449348366}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -1305,7 +1380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1492534335
 GameObject:
@@ -1696,7 +1771,7 @@ GameObject:
   - component: {fileID: 1855743975}
   - component: {fileID: 1855743974}
   m_Layer: 0
-  m_Name: Sphere (7)
+  m_Name: EyeR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,12 +1848,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855743973}
   m_LocalRotation: {x: -0, y: 0.99954444, z: -0, w: 0.030183395}
-  m_LocalPosition: {x: 7.9316, y: 4.117, z: -1.8264}
-  m_LocalScale: {x: 0.23479226, y: 0.23479226, z: 0.23479226}
+  m_LocalPosition: {x: 7.2344923, y: 0.14319277, z: -2.4764364}
+  m_LocalScale: {x: 0.23479234, y: 0.23479228, z: 0.23479234}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 176.541, z: 0}
 --- !u!1 &1914939965
 GameObject:
@@ -2161,12 +2236,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001071329}
   m_LocalRotation: {x: -0.70678467, y: 0.70678467, z: -0.02134265, w: 0.02134265}
-  m_LocalPosition: {x: 8.042, y: 3.7758, z: -2.125}
-  m_LocalScale: {x: 0.25603575, y: 0.5557328, z: 0.39307156}
+  m_LocalPosition: {x: 7.3448915, y: -0.19800735, z: -2.7750363}
+  m_LocalScale: {x: 0.25603575, y: 0.5557327, z: 0.39307156}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 176.541, z: -90}
 --- !u!1 &2098881920
 GameObject:
@@ -2455,12 +2530,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125819840}
   m_LocalRotation: {x: -0.12960887, y: 0.0017818088, z: 0.0016248485, w: -0.9915623}
-  m_LocalPosition: {x: 8.702, y: 2.454, z: -2.953}
-  m_LocalScale: {x: 0.54662526, y: 1.0981967, z: 0.30417687}
+  m_LocalPosition: {x: 8.004891, y: -1.5198073, z: -3.6030364}
+  m_LocalScale: {x: 0.5466252, y: 1.0981967, z: 0.3041769}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 684998802}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 14.894, y: 359.766, z: -0.218}
 --- !u!1 &2127931041
 GameObject:
