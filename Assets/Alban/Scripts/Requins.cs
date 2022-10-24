@@ -29,7 +29,7 @@ namespace Alban{
 
         private void OnTriggerEnter(Collider other)
         {
-            var timer = other.GetComponent<Timer>();
+            var timer = FindObjectOfType<Timer>();
             if(timer != null)
             {
 
@@ -38,11 +38,6 @@ namespace Alban{
                 if (other.tag == "Player" && timeRemaining >= 0)
                 {
                     Debug.LogError("T mort");
-                }
-
-                else if (other.tag == "Player" && timeRemaining <= 0)
-                {
-                    Debug.LogError("Parfait !");
                 }
             }
         }
