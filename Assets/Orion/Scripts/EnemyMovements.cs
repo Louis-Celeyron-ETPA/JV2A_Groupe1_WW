@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fd0820e8af65439f982e5437193aa8a3b3b374eb
 namespace Orion
 {
     public class EnemyMovements : MonoBehaviour
@@ -50,6 +53,11 @@ namespace Orion
             myTransform.position += direction * currentEnemySpeed;
 
         }
+<<<<<<< HEAD
     }
 
+=======
+
+    }
+>>>>>>> fd0820e8af65439f982e5437193aa8a3b3b374eb
 }
