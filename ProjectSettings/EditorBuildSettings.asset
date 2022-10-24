@@ -4,5 +4,80 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Louis/Scenes/MainMenu.unity
+    guid: 57d1466e193ddda4fbd8f2e7990b8593
+  - enabled: 1
+    path: Assets/Alban/Scenes/Alban - MiniJeux-1.unity
+    guid: 3702bbc850767ff49b6741f5296c2d48
+  - enabled: 1
+    path: Assets/Alban/Scenes/Alban - MiniJeux-2.unity
+    guid: b35644c764004cd469641699d66c233c
+  - enabled: 1
+    path: Assets/Alban/Scenes/Alban - MiniJeux-3.unity
+    guid: 54796666c89b15e4ca4d0fbb799f1f1b
+  - enabled: 1
+    path: Assets/Aurelien/Scenes/Aurelien - MiniJeux-1.unity
+    guid: c633dd2f132a143469591756658a770a
+  - enabled: 1
+    path: Assets/Aurelien/Scenes/Aurelien - MiniJeux-2.unity
+    guid: ce159daa1216f3249b83d027eec7c60e
+  - enabled: 1
+    path: Assets/Aurelien/Scenes/Aurelien - MiniJeux-3.unity
+    guid: 227892ee1f90c814c89e5446c7caca3e
+  - enabled: 1
+    path: Assets/Gabriel/Scenes/Gabriel - MiniJeux-1.unity
+    guid: 7a39f3bdccce0154f940b0df283ef457
+  - enabled: 1
+    path: Assets/Gabriel/Scenes/Gabriel - MiniJeux-2.unity
+    guid: 69d277ce97c56dd499bae8725663310f
+  - enabled: 1
+    path: Assets/Gabriel/Scenes/Gabriel - MiniJeux-3.unity
+    guid: 154158c7270969d47802859507aa9da2
+  - enabled: 1
+    path: Assets/Hugo/Scenes/Hugo - MiniJeux-1.unity
+    guid: 04e5998799238544d9e8527819424a13
+  - enabled: 1
+    path: Assets/Hugo/Scenes/Hugo - MiniJeux-2.unity
+    guid: 53468b51024e032429e54e8845185edb
+  - enabled: 1
+    path: Assets/Hugo/Scenes/Hugo - MiniJeux-3.unity
+    guid: cd667d391caf67b4eb1ad08e1059078d
+  - enabled: 1
+    path: Assets/Kylian/Scenes/Kylian - MiniJeux-1.unity
+    guid: c48791d3815431d4db3806e2101fa2d3
+  - enabled: 1
+    path: Assets/Kylian/Scenes/Kylian - MiniJeux-2.unity
+    guid: 5a36dab4a307cff48ac026de829855de
+  - enabled: 1
+    path: Assets/Kylian/Scenes/Kylian - MiniJeux-3.unity
+    guid: 51f1332922e9b6848a9ffb5d5dd60e73
+  - enabled: 1
+    path: Assets/Lisa/Scenes/Lisa - MiniJeux-1.unity
+    guid: cab693b53917d8541aadcb7e5a4886d4
+  - enabled: 1
+    path: Assets/Lisa/Scenes/Lisa - MiniJeux-2.unity
+    guid: 00631f5bc07bbcc46af5103f0a82e21f
+  - enabled: 1
+    path: Assets/Lisa/Scenes/Lisa - MiniJeux-3.unity
+    guid: 3d74b75749e0e9e47932a8286e7d1495
+  - enabled: 1
+    path: Assets/Maelle/Scenes/Maelle - MiniJeux-1.unity
+    guid: 89af9619753aeb048981779ed724f159
+  - enabled: 1
+    path: Assets/Maelle/Scenes/Maelle - MiniJeux-2.unity
+    guid: e0fe6e4b6a336114c9e7111bcbdd8298
+  - enabled: 1
+    path: Assets/Maelle/Scenes/Maelle - MiniJeux-3.unity
+    guid: 9728a3ecec5164842a258eef8b2a8cb5
+  - enabled: 1
+    path: Assets/Orion/Scenes/Orion - MiniJeux-1.unity
+    guid: 58f338614a1c7eb48b21bc520b04c2d3
+  - enabled: 1
+    path: Assets/Orion/Scenes/Orion - MiniJeux-2.unity
+    guid: 4d023438df5059a468fafde6195388ac
+  - enabled: 1
+    path: Assets/Orion/Scenes/Orion - MiniJeux-3.unity
+    guid: b62726153ed8be44b989cb6fa6066f29
   m_configObjects: {}
