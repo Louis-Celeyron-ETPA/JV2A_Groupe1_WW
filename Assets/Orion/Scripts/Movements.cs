@@ -9,7 +9,6 @@ namespace Orion
         // Start is called before the first frame update
         public Transform myTransform;
         public SpriteRenderer spriteRenderer;
-
         public Sprite newSprite;
 
         public float upSpeed = 1f;
