@@ -18,6 +18,8 @@ namespace Orion
         public float cooldownTime = 1f;
         public float cooldownSpeed = 1f;
 
+        public bool cooldown = false;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -30,22 +32,29 @@ namespace Orion
         {
             currentTime += Time.deltaTime;
 
-            if (currentTime <= cooldownTime)
+            if (cooldown)
             {
-                currentEnemySpeed = baseEnemySpeed * cooldownSpeed;
+
+                currentEnemySpeed = baseEnemySpeed * cooldownSpeed; 
+
+                if (currentTime >= cooldownTime)
+                {
+                    cooldown = false;
+                    currentTime = 0f;
+                }
             }
             else
             {
                 currentEnemySpeed = baseEnemySpeed;
-            }
 
-            if (currentTime >= timeMax)
-            {
-                direction = balloonTransform.position - myTransform.position;
-                direction = direction.normalized;
-                currentTime = 0f;
+                if (currentTime >= timeMax)
+                {
+                    direction = balloonTransform.position - myTransform.position;
+                    direction = direction.normalized;
+                    cooldown = true;
+                    currentTime = 0f;
+                }
             }
-
 
             myTransform.position += direction * currentEnemySpeed;
 
