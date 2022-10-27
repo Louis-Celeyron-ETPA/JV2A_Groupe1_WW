@@ -12,7 +12,7 @@ public class Bouton : MonoBehaviour
 		btn.onClick.AddListener(TaskOnClick);
 	}
 
-	void TaskOnClick()
+	public void TaskOnClick()
 	{
 		Debug.Log("Perdu !");
 	}
