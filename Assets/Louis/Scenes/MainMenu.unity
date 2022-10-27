@@ -174,7 +174,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: MainMenu
 --- !u!222 &26270313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -735,11 +735,55 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: MainMenu
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: Alban - MiniJeux-1
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: Alban - MiniJeux-2
+      m_Image: {fileID: 0}
+    - m_Text: Alban - MiniJeux-3
+      m_Image: {fileID: 0}
+    - m_Text: Aurelien - MiniJeux-1
+      m_Image: {fileID: 0}
+    - m_Text: Aurelien - MiniJeux-2
+      m_Image: {fileID: 0}
+    - m_Text: Aurelien - MiniJeux-3
+      m_Image: {fileID: 0}
+    - m_Text: Gabriel - MiniJeux-1
+      m_Image: {fileID: 0}
+    - m_Text: Gabriel - MiniJeux-2
+      m_Image: {fileID: 0}
+    - m_Text: Gabriel - MiniJeux-3
+      m_Image: {fileID: 0}
+    - m_Text: Hugo - MiniJeux-1
+      m_Image: {fileID: 0}
+    - m_Text: Hugo - MiniJeux-2
+      m_Image: {fileID: 0}
+    - m_Text: Hugo - MiniJeux-3
+      m_Image: {fileID: 0}
+    - m_Text: Kylian - MiniJeux-1
+      m_Image: {fileID: 0}
+    - m_Text: Kylian - MiniJeux-2
+      m_Image: {fileID: 0}
+    - m_Text: Kylian - MiniJeux-3
+      m_Image: {fileID: 0}
+    - m_Text: Lisa - MiniJeux-1
+      m_Image: {fileID: 0}
+    - m_Text: Lisa - MiniJeux-2
+      m_Image: {fileID: 0}
+    - m_Text: Lisa - MiniJeux-3
+      m_Image: {fileID: 0}
+    - m_Text: Maelle - MiniJeux-1
+      m_Image: {fileID: 0}
+    - m_Text: Maelle - MiniJeux-2
+      m_Image: {fileID: 0}
+    - m_Text: Maelle - MiniJeux-3
+      m_Image: {fileID: 0}
+    - m_Text: Orion - MiniJeux-1
+      m_Image: {fileID: 0}
+    - m_Text: Orion - MiniJeux-2
+      m_Image: {fileID: 0}
+    - m_Text: Orion - MiniJeux-3
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -847,7 +891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b41143aad2926d41af3fdd845503e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes: []
   dropdown: {fileID: 725826746}
 --- !u!4 &733886713
 Transform:
@@ -1625,6 +1668,125 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &1450366866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450366868}
+  - component: {fileID: 1450366867}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1450366867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450366866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onRight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1450366867}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: DebugLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Right
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1450366867}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: DebugLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Left
+          m_BoolArgument: 0
+        m_CallState: 2
+  onUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1450366867}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: DebugLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Up
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1450366867}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: DebugLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Down
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1450366867}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: DebugLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Action
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1450366868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450366866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582680280
 GameObject:
   m_ObjectHideFlags: 0
