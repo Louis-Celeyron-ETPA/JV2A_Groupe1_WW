@@ -17,6 +17,18 @@ public class Difficulty : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private static Difficulty GetDifficultyClass()
+    {
+        if(Difficulty.Instance == null)
+        {
+            return new Difficulty();
+        }
+        else
+        {
+            return Difficulty.Instance;
+        }
+    }
+
     private int currentDifficulty = 1;
     public void RiseDifficulty()
     {
