@@ -52,7 +52,7 @@ public class Selecteur : MonoBehaviour
             if(scoreBleu==4 && scoreRouge == 4)
             {
                 textResultat.text = "Victoire parfaite";
-            }else if (scoreBleu >2 && scoreRouge > 2)
+            }else if (scoreBleu >=2 && scoreRouge >= 2)
             {
                 textResultat.text = "Victoire";
             }
