@@ -19,7 +19,7 @@ public class RespawnCarrot : MonoBehaviour
     {
         if (other.tag == "Respawn")
         {
-            other.transform.position = new Vector3(other.transform.position.x, 16, other.transform.position.z);
+            other.transform.position = new Vector3(other.transform.position.x, 25,other.transform.position.z);
         }
     }
 }
