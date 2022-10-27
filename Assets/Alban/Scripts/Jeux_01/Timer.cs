@@ -27,18 +27,19 @@ namespace Alban
 
                 else if (timeRemaining <= 0)
                 {
-                    Debug.Log("Victoire !");
+                    Debug.LogError("Victoire !");
                     timeRemaining = 0;
                     timeIsRunning = false;
                 }
             }
+
+            DisplayTime(timeRemaining);
         }
         void DisplayTime(float timeToDisplay)
         {
-            timeToDisplay += 1;
+            //timeToDisplay += 1;
             float seconds = Mathf.FloorToInt(timeToDisplay % 60);
             timeText.text = string.Format("{0:00}", seconds);
-            DisplayTime(timeRemaining);
         }
     }
 }
