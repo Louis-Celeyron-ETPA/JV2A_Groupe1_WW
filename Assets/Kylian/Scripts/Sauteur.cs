@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class haie : MonoBehaviour
+public class Sauteur : MonoBehaviour
 {
-    public Transform haiees;
+    public Transform sauter;
+    public KeyCode myKey;
 
+    public float speedMax = 0.01f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,9 @@ public class haie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * 3);
-        
+        if(Input.GetKey(KeyCode.Space) == true)
+        {
+            transform.Translate(0, 0.01f, 0);
+        }
     }
 }
