@@ -8,7 +8,7 @@ namespace Alban{
     {
 
         public Transform target;
-        float mooveSpeed = 5;
+        float mooveSpeed = 7;
         public Transform myTransform;
         public Rigidbody rgbd;
 
