@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,37 +7,29 @@ using UnityEngine.SceneManagement;
 
 public class MySceneManager : MonoBehaviour
 {
-    public List<Scene> scenes;
-    public Dropdown dropdown;
+    public  Dropdown dropdown;
     private int currentIndex;
+    private List<string> allScenes;
 
-    // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(SceneManager.sceneCountInBuildSettings);
-        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        if(!dropdown)
         {
-            scenes.Add(SceneManager.GetSceneByBuildIndex(i));
+            return;
         }
-        dropdown.options.Clear();
-        foreach (var scene in scenes)
-        {
-            dropdown.options.Add(new Dropdown.OptionData("Scene Numero " + scene.buildIndex.ToString("00")));
-        }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        allScenes = dropdown.options.Select(o => o.text).ToList();
     }
-
     public void SetCurrentIndex(int newIndex)
     {
         currentIndex = newIndex;
     }
     public void LoadSceneAtCurrentIndex()
     {
-        SceneManager.LoadScene(currentIndex);
+        SceneManager.LoadScene(dropdown.options[currentIndex].text);
+    }
+    public void EndOfMinigame(int sucess)
+    {
+            
     }
 }

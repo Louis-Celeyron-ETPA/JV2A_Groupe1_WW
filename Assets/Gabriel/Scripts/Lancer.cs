@@ -9,6 +9,8 @@ namespace Gabriel
     {
         public Transform boule_de_neige;
         public float speed = 0.4f;
+
+        public bool shouldGo;
         // Start is called before the first frame update
         void Start()
         {
@@ -19,6 +21,10 @@ namespace Gabriel
         void Update()
         {
             if (Input.GetKey(KeyCode.Space) == true)
+            {
+                shouldGo = true;
+            }
+            if(shouldGo)
             {
                 boule_de_neige.position = boule_de_neige.position + Vector3.right * speed;
             }
