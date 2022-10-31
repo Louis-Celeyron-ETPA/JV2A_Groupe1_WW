@@ -28,6 +28,6 @@ namespace Gabriel
             {
                 boule_de_neige.position = boule_de_neige.position + Vector3.right * speed;
             }
-        }
+        } 
     }
 }
