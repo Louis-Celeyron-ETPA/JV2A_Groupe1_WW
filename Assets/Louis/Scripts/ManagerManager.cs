@@ -7,6 +7,7 @@ public class ManagerManager : MonoBehaviour
     [Header("Manager")]
     public Difficulty dificultyManager;
     public MySceneManager sceneManager;
+    public TimeManager timeManager;
 
     private static ManagerManager instance;
     public static ManagerManager Instance
@@ -19,7 +20,8 @@ public class ManagerManager : MonoBehaviour
                 var m = newManager.AddComponent<ManagerManager>();
                 m.dificultyManager = newManager.AddComponent<Difficulty>();
                 m.sceneManager = newManager.AddComponent<MySceneManager>();
-
+                m.timeManager = newManager.AddComponent<TimeManager>();
+                Debug.LogError("Aucune instance trouvée, une instance temporaire à été crée, pour une experience optimal lancer depuis le main menu. Bisous, Louis");
                 return m;
             }
             else
@@ -34,11 +36,11 @@ public class ManagerManager : MonoBehaviour
     }
     public static Difficulty DifficultyManager => Instance.dificultyManager;
     public static MySceneManager SceneManager => Instance.sceneManager;
+    public static TimeManager TimeManager=> Instance.timeManager;
 
 
     private void Awake()
     {
-        Debug.LogError("HAHA");
 
         if(ManagerManager.instance != null)
         {
