@@ -19,6 +19,7 @@ public class RecupCarrot : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            other.GetComponent<ScoreKeeper>().RaiseScore(1);
             Destroy(gameObject);
         }
     }

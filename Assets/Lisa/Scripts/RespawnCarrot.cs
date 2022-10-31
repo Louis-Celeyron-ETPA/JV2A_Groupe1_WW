@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class RespawnCarrot : MonoBehaviour
 {
+    public RecupCarrot carrotePrefab;
+    public Transform[] spawnPoint;
+    public float delay = 1;
+    float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = delay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Respawn")
+        timer = timer - Time.deltaTime;
+        if(timer<=0)
         {
-            other.transform.position = new Vector3(other.transform.position.x, 25,other.transform.position.z);
+            Instantiate(carrotePrefab, spawnPoint[Random.Range(0,spawnPoint.Length)]);
+            timer = delay;
         }
     }
 }
