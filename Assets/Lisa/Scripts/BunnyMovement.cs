@@ -7,7 +7,7 @@ public class BunnyMovement : MonoBehaviour
     // Start is called before the first frame update
     public Transform move;
 
-    float speed = 0.2f;
+    float speed = 0.25f;
 
     void Start()
     {
