@@ -8,6 +8,7 @@ namespace Orion
 
     {
         public Transform myTransform;
+        public BallMovements ball;
 
         public float rotateValue = 1f;
         // Start is called before the first frame update
@@ -19,12 +20,14 @@ namespace Orion
         // Update is called once per frame
         void Update()
         {
-            myTransform.Rotate(new Vector3(0, 0, rotateValue));
-            if (myTransform.rotation.eulerAngles.z >= 90f)
+            if (!ball.isThrown)
             {
-                rotateValue = rotateValue * -1f;
+                myTransform.Rotate(new Vector3(0, 0, rotateValue));
+                if (myTransform.rotation.eulerAngles.z >= 90f)
+                {
+                    rotateValue = rotateValue * -1f;
+                }
             }
-
         }
     }
 }
