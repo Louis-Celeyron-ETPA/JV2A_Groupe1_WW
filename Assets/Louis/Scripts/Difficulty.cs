@@ -7,7 +7,6 @@ public class Difficulty : MonoBehaviour
     public int maxDifficulty = 9;
     public int minDifficulty = 0;
 
-
     private int currentDifficulty = 1;
     public void RiseDifficulty()
     {
