@@ -32,7 +32,7 @@ namespace Alban
             if (bullet != null)
             {
                 Destroy(gameObject);
-                //bottleRemaining -= 1;
+                bottleRemaining -= 1;
             }
         }
     }

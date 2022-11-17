@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Alban
 {
@@ -9,7 +10,7 @@ namespace Alban
     {
         public float timeRemaining = 15;
         public bool timeIsRunning = false;
-        public TextMesh timeText;
+        public TextMeshPro timeText;
 
         private void Start()
         {
@@ -27,7 +28,7 @@ namespace Alban
 
                 else if (timeRemaining <= 0)
                 {
-                    Debug.LogError("Victoire !");
+                    Debug.LogError("Défaite !");
                     timeRemaining = 0;
                     timeIsRunning = false;
                 }
