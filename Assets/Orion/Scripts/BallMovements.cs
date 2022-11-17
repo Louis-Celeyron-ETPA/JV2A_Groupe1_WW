@@ -31,6 +31,7 @@ namespace Orion
             rd.bodyType = RigidbodyType2D.Dynamic;
             rd.AddForce(transform.right * throwingForce);
         }
+
     }
 }
 
