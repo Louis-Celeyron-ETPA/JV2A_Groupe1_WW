@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sauteur : MonoBehaviour
+public class sauteur1 : MonoBehaviour
 {
     public Transform sauter;
     public KeyCode myKey;
@@ -18,7 +18,7 @@ public class Sauteur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space) == true)
+        if (Input.GetKey(KeyCode.Space) == true)
         {
             transform.Translate(0, 0.01f, 0);
         }
