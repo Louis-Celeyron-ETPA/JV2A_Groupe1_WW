@@ -13,6 +13,10 @@ namespace Orion
 
         public float throwingForce = 100f;
 
+        public bool touchedGround = false;
+
+        public CameraFollow cam;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -30,6 +34,7 @@ namespace Orion
             isThrown = true;
             rd.bodyType = RigidbodyType2D.Dynamic;
             rd.AddForce(transform.right * throwingForce);
+            cam.condition = true;
         }
 
     }

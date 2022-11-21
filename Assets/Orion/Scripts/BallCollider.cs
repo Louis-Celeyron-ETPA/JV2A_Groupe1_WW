@@ -4,9 +4,11 @@ using UnityEngine;
 
 namespace Orion
 {
-    public class GroundCollider : MonoBehaviour
+    public class BallCollider : MonoBehaviour
     {
         // Start is called before the first frame update
+        public Rigidbody2D rd;
+        public float ejectingForce = 1f;
         void Start()
         {
 
@@ -23,8 +25,10 @@ namespace Orion
             BallMovements MovementsColliding = collision.gameObject.GetComponent<BallMovements>();
             if (MovementsColliding != null)
             {
-                MovementsColliding.touchedGround = true;
-                Debug.Log(MovementsColliding.touchedGround);
+                if (!MovementsColliding.touchedGround)
+                {
+                    rd.AddForce(new Vector3(1f,0.9f,0f) * ejectingForce);
+                }
             }
 
         }

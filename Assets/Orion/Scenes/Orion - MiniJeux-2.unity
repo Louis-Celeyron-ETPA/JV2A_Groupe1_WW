@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 163879710}
   - component: {fileID: 163879709}
   - component: {fileID: 163879708}
+  - component: {fileID: 163879711}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &163879711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163879707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8c495bc86545c4bb389d3cd9ab46f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  condition: 0
+  target: {fileID: 721466566}
 --- !u!1 &484441292
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myTransform: {fileID: 484441294}
   ball: {fileID: 721466570}
-  rotateValue: 1
+  rotateValue: 1.3
 --- !u!4 &484441294
 Transform:
   m_ObjectHideFlags: 0
@@ -314,7 +329,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8773585, g: 0.28555536, b: 0.28555536, a: 1}
+  m_Color: {r: 0.4528141, g: 0.5754717, b: 0.31759524, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -563,7 +578,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rd: {fileID: 721466568}
   isThrown: 0
-  throwingForce: 620
+  throwingForce: 660
+  touchedGround: 0
+  cam: {fileID: 163879711}
 --- !u!114 &721466571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,6 +741,7 @@ GameObject:
   - component: {fileID: 954154519}
   - component: {fileID: 954154522}
   - component: {fileID: 954154521}
+  - component: {fileID: 954154523}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -791,7 +809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954154518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.52, y: -4.86, z: 0}
+  m_LocalPosition: {x: 4.52, y: -4.92, z: 0}
   m_LocalScale: {x: 60.39821, y: 1.6756023, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -845,6 +863,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &954154523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954154518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d896f6011d12b54eab7ed70f53ff075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1114363449
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +885,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1114363451}
   - component: {fileID: 1114363450}
+  - component: {fileID: 1114363453}
+  - component: {fileID: 1114363452}
   m_Layer: 0
   m_Name: Jack
   m_TagString: Untagged
@@ -929,6 +961,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1114363452
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114363449}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDrag: 0.5
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1114363453
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114363449}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1252506583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,8 +1075,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252506583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5192, y: 1.1149, z: 0}
-  m_LocalScale: {x: 48.439667, y: 13.159349, z: 1}
+  m_LocalPosition: {x: 4.5192, y: 4.91, z: 0}
+  m_LocalScale: {x: 68.42103, y: 21.05496, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1025,6 +1094,7 @@ GameObject:
   - component: {fileID: 1267360517}
   - component: {fileID: 1267360520}
   - component: {fileID: 1267360519}
+  - component: {fileID: 1267360521}
   m_Layer: 0
   m_Name: Ball2
   m_TagString: Untagged
@@ -1074,7 +1144,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.44753468, g: 0.769663, b: 0.8396226, a: 1}
+  m_Color: {r: 1, g: 0.07075471, b: 0.17725924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1127,12 +1197,26 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 1
   m_LinearDrag: 1
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1267360521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267360516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f465059ba818ec646a83be099477fde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rd: {fileID: 1267360520}
+  ejectingForce: 900
