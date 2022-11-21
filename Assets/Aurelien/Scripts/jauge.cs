@@ -9,7 +9,10 @@ namespace Aurelien
     {
         public Transform barre;
         public bool stop;
-        
+        public Vector3 top, bot;
+        public float pourcentage;
+        public float speed =1;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -19,20 +22,12 @@ namespace Aurelien
         // Update is called once per frame
         void Update()
         {
-            if (stop == false)
+            pourcentage += Time.deltaTime * speed;
+            if(pourcentage>=1)
             {
-                barre.position -= barre.up;
+                pourcentage = 0;
             }
-
-            if(stop == true)
-            {
-                barre.position += barre.up;
-            }
-
-            if(barre.position.y <= 24)
-            {
-                stop = true;
-            }
+            barre.localPosition = Vector3.Lerp(bot, top, pourcentage);
         }
     }
 

@@ -2195,7 +2195,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 0
 --- !u!65 &47725794
 BoxCollider:
@@ -2295,6 +2295,7 @@ MonoBehaviour:
   IsFired: 0
   power: 80000
   powerMax: 80000
+  valeurJauge: {fileID: 1165349796}
 --- !u!1 &48517426
 GameObject:
   m_ObjectHideFlags: 0
@@ -50921,7 +50922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165349791}
   m_LocalRotation: {x: 0.3276085, y: -0, z: -0, w: 0.9448136}
-  m_LocalPosition: {x: 80.3999, y: 51.2, z: -1146.4}
+  m_LocalPosition: {x: 80.3999, y: 29, z: -1163.9}
   m_LocalScale: {x: 10.859311, y: 5.839471, z: 2.452921}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51005,6 +51006,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barre: {fileID: 1165349792}
   stop: 0
+  top: {x: 80.3999, y: 78.3, z: -1125}
+  bot: {x: 80.3999, y: 23.6, z: -1168.1}
+  pourcentage: 0
+  speed: 0.55
 --- !u!1 &1165552717
 GameObject:
   m_ObjectHideFlags: 0
