@@ -10,7 +10,7 @@ namespace Alban
     {
         public float timeRemaining = 15;
         public bool timeIsRunning = false;
-        public TextMeshPro timeText;
+        public TextMeshProUGUI timeText;
 
         private void Start()
         {
