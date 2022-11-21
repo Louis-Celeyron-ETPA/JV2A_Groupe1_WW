@@ -30,14 +30,20 @@ namespace Alban{
         private void OnTriggerEnter(Collider other)
         {
             var timer = FindObjectOfType<Timer>();
-            if(timer != null)
+            var timeIsRemaining = FindObjectOfType<Timer>();
+            if (timer != null)
             {
 
                 float timeRemaining = timer.timeRemaining;
 
-                if (other.tag == "Player" && timeRemaining >= 0)
+                if (other.tag == "Player" && timeRemaining > 0)
                 {
-                    Debug.LogError("T mort");
+                    Debug.LogError("ECHEC");
+                }
+
+                else if (timeRemaining <= 0 && other.tag == "Player")
+                {
+                    Debug.LogError("PARFAIT !");
                 }
             }
         }

@@ -18,6 +18,9 @@ namespace Alban
 
         void Update()
         {
+
+            var other = FindObjectOfType<Requins>();
+
             if (timeIsRunning == true)
             {
                 if (timeRemaining > 0)
@@ -27,7 +30,14 @@ namespace Alban
 
                 else if (timeRemaining <= 0)
                 {
-                    Debug.LogError("Victoire !");
+                    Debug.Log("Ok !");
+                    timeRemaining = 0;
+                    timeIsRunning = false;
+                }
+
+                else if (timeRemaining <= 0 && other.tag == "Player")
+                {
+                    Debug.LogError("PARFAIT !");
                     timeRemaining = 0;
                     timeIsRunning = false;
                 }
@@ -37,9 +47,23 @@ namespace Alban
         }
         void DisplayTime(float timeToDisplay)
         {
+            var other = FindObjectOfType<Requins>();
             //timeToDisplay += 1;
-            float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-            timeText.text = string.Format("{0:00}", seconds);
+            if (timeRemaining >= 0 && timeIsRunning == true)
+            {
+                float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+                timeText.text = string.Format("{0:00}", seconds);
+            }
+
+            else if (timeRemaining <= 0 && timeIsRunning == false)
+            {
+                timeText.text = "Bien !";
+            }
+
+            else if (timeRemaining <= 0 && other.tag == "Player" && timeIsRunning == false)
+            {
+                timeText.text = "PARFAIT !";
+            }
         }
     }
 }
