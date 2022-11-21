@@ -20,7 +20,7 @@ public class sauteur1 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) == true)
         {
-            transform.Translate(0, 0.01f, 0);
+            transform.Translate(0, 0.008f, 0);
         }
     }
 }
