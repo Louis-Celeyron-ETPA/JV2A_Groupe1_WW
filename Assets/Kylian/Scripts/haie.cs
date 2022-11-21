@@ -17,6 +17,10 @@ public class haie : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.left * Time.deltaTime * 3);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
         
     }
 }

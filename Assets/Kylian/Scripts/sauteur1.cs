@@ -7,8 +7,6 @@ public class sauteur1 : MonoBehaviour
     public Transform sauter;
     public KeyCode myKey;
 
-    public float speedMax = 0.01f;
-
     // Start is called before the first frame update
     void Start()
     {
