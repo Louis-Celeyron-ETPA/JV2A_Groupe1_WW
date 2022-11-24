@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Boule_neige
+  - TrucBleu
+  - TrucRose
+  - TrucRouge
   layers:
   - Default
   - TransparentFX
