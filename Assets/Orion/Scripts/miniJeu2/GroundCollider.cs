@@ -24,7 +24,6 @@ namespace Orion
             if (MovementsColliding != null)
             {
                 MovementsColliding.touchedGround = true;
-                Debug.Log(MovementsColliding.touchedGround);
             }
 
         }

@@ -31,10 +31,14 @@ namespace Orion
 
         public void Throw()
         {
-            isThrown = true;
-            rd.bodyType = RigidbodyType2D.Dynamic;
-            rd.AddForce(transform.right * throwingForce);
-            cam.condition = true;
+            if (!isThrown)
+            {
+                isThrown = true;
+                rd.bodyType = RigidbodyType2D.Dynamic;
+                rd.AddForce(transform.right * throwingForce);
+                cam.condition = true;
+            }
+
         }
 
     }
