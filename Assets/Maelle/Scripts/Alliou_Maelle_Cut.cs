@@ -5,6 +5,8 @@ using UnityEngine;
 public class Alliou_Maelle_Cut : MonoBehaviour
 {
     public KeyCode myKey;
+    public Vector3 positioninitiale;
+    public Transform legume;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +16,9 @@ public class Alliou_Maelle_Cut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Z) == true)
+        if (Input.GetKeyDown(KeyCode.Z) == true)
         {
-            Destroy(gameObject);
+            legume.position = legume.position + Vector3.right;
         }
     }
 }
