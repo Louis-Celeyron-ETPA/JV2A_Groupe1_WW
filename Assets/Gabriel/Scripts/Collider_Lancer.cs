@@ -21,8 +21,7 @@ public class Collider_Lancer : MonoBehaviour
         collide = false;
     }
 
-
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         
         print("COLISION");
