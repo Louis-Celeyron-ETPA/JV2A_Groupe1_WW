@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace Alban
 {
@@ -8,6 +9,7 @@ namespace Alban
     {
 
         public float bottleRemaining = 10;
+        public TextMeshProUGUI NombreBouteilleRestante;
 
         // Start is called before the first frame update
         void Start()
@@ -19,18 +21,16 @@ namespace Alban
         void Update()
         {
 
-            var bullet = FindObjectOfType<Tir>();
-
-            if (bullet != null)
-            {
-                bottleRemaining -= 1;
-            }
-
             if (bottleRemaining == 0)
             {
                 Debug.LogError("Victoire !");
             }
-            
+
+            NombreBouteilleRestante.text = "Bouteilles Restantes : " + bottleRemaining;
+        }
+        public void Truc()
+        {
+           bottleRemaining -= 1;
         }
     }
 }

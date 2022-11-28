@@ -24,10 +24,11 @@ namespace Alban
 
         private void OnTriggerEnter(Collider other)
         {
+            var scoreKeeper = FindObjectOfType<Decompte_Boutille>();
 
-            var bullet = FindObjectOfType<Tir>();
-            if (bullet != null)
+            if(scoreKeeper !=null)
             {
+                scoreKeeper.Truc();
                 Destroy(gameObject);
             }
         }
