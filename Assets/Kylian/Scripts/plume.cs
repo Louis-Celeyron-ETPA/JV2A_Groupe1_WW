@@ -13,6 +13,11 @@ public class plume : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(-1 * Vector3.forward * Time.deltaTime * 1) ;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+
     }
 }
