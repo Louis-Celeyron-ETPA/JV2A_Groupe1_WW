@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bottle
+  - Boule_neige
+  - TrucBleu
+  - TrucRose
+  - TrucRouge
+  - Bagnole
   layers:
   - Default
   - TransparentFX
