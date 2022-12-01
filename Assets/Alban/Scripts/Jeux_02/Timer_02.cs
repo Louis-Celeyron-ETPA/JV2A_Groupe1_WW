@@ -10,7 +10,7 @@ namespace Alban
     {
         public float timeRemaining = 15;
         public bool timeIsRunning = false;
-        public TextMeshPro timeText;
+        public TextMeshProUGUI timeText;
 
         private void Start()
         {
@@ -19,6 +19,9 @@ namespace Alban
 
         void Update()
         {
+
+            var bottleRemaining = FindObjectOfType<Decompte_Boutille>().bottleRemaining;
+
             if (timeIsRunning == true)
             {
                 if (timeRemaining > 0)
@@ -26,12 +29,23 @@ namespace Alban
                     timeRemaining -= Time.deltaTime;
                 }
 
-                else if (timeRemaining <= 0)
+                else if (timeRemaining <= 0 && bottleRemaining > 5)
                 {
                     Debug.LogError("Défaite !");
                     timeRemaining = 0;
                     timeIsRunning = false;
                 }
+
+                else if (timeRemaining <= 0 && bottleRemaining <= 5)
+                {
+                    Debug.LogError("OK !");
+                    timeRemaining = 0;
+                    timeIsRunning = false;
+                }
+
+                //PARFAIT dans le Script "Decompe_Boutille"
+
+
             }
 
             DisplayTime(timeRemaining);
