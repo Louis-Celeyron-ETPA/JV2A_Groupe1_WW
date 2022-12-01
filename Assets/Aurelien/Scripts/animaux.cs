@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Aurelien
 {
-
-    public class collision : MonoBehaviour
+    public class animaux : MonoBehaviour
     {
+        public Transform animal;
         // Start is called before the first frame update
         void Start()
         {
@@ -16,14 +16,7 @@ namespace Aurelien
         // Update is called once per frame
         void Update()
         {
-
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            Destroy(gameObject);
+            animal.position -= animal.right;
         }
     }
-
 }
-
