@@ -13,7 +13,7 @@ public class Trie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = FindObjectOfType<Selecteur>();
     }
 
     // Update is called once per frame

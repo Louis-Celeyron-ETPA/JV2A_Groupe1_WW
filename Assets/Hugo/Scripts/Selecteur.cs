@@ -5,7 +5,7 @@ using TMPro;
 
 public class Selecteur : MonoBehaviour
 {
-    public List<GameObject> cubeSelect = new List<GameObject>();
+    public List<Trie> cubeSelect = new List<Trie>();
     private Renderer mr;
     int i;
     public TextMeshPro textRouge;
@@ -69,15 +69,15 @@ public class Selecteur : MonoBehaviour
         if (i < cubeSelect.Count)
         {
             mr = cubeSelect[i].GetComponent<Renderer>();
-            mr.material.color = new Color(0f, 0f, 1f, 1f);
-            /*if (cubeSelect[i].couleur == bleu)
+            //mr.material.color = new Color(0f, 0f, 1f, 1f);
+            if (cubeSelect[i].couleur == "bleu")
             {
                 mr.material.color = new Color(0f, 0f, 1f, 1f);
             }
-            else
+            if (cubeSelect[i].couleur == "rouge")
             {
-                mr.material.color = new Color(1f, 0f, 0f, 1f);
-            }*/
+                mr.material.color = new Color(1f, 0f, 0f, 0f);
+            }
 
         }
     }
