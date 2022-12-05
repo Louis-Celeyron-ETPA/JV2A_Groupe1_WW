@@ -10,6 +10,8 @@ public class Collider_voiture : MonoBehaviour
     public GameObject bagnole;
     public Collider collid;
     bool collide;
+    public string tagToCollider;
+    public Rigidbody rgbd;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +25,9 @@ public class Collider_voiture : MonoBehaviour
         collide = false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-
-        print("COLISION");
-        if (other.gameObject.CompareTag("Bagnole"))
+        if (collision.transform.tag == tagToCollider)
         {
             collide = true;
         }

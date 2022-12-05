@@ -5,6 +5,7 @@ using UnityEngine;
 public class Voiture_deplacement : MonoBehaviour
 {
     public Transform voiture;
+    public Rigidbody rgbd;
     public float speed = 0.1f;
     // Start is called before the first frame update
     void Start()
@@ -17,12 +18,13 @@ public class Voiture_deplacement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D) == true)
         {
-            voiture.position = voiture.position + Vector3.right * speed;
+            rgbd.MovePosition(voiture.position + Vector3.right * speed);
+
         }
 
         if (Input.GetKey(KeyCode.Q) == true)
         {
-            voiture.position = voiture.position + Vector3.left * speed;
+            rgbd.MovePosition(voiture.position + Vector3.left * speed);
         }
     }
 }
