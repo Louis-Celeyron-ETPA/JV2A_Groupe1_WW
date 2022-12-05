@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - brick
+  - Boule_neige
+  - Bottle
+  - Player2
+  - morceau_2
+  - morceau_1
+  - morceau_4
+  - morceau_5
+  - morceau_3
+  - Player3
   layers:
   - Default
   - TransparentFX
