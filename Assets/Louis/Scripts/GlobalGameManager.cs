@@ -8,12 +8,12 @@ public class GlobalGameManager : MonoBehaviour
     
     public void WinGame()
     {
-        Debug.Log("C'est perdu");
+        Debug.Log("C'est gagné");
     }
 
     public void LoseGame()
     {
-        Debug.Log("C'est gagné");
+        Debug.Log("C'est perdu");
     }
     public void EndOfMinigame(MinigameRating mgRating)
     {
