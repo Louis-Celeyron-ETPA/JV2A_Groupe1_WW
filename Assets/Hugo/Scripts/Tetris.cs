@@ -16,6 +16,8 @@ public class Tetris : MonoBehaviour
     public Tetromino currentTetromino;
     public bool victoire = false;
 
+    public int nbPieceTombe = 0;
+
     private int index;
 
     // Start is called before the first frame update
@@ -52,6 +54,23 @@ public class Tetris : MonoBehaviour
             currentTetromino = Instantiate(cubeSelectPrefab[Random.Range(0, cubeSelectPrefab.Count)],tetrominoSpawn);
             currentTetromino.tetrisManager = this;
             index++;
+        }
+        else
+        {
+            if(nbPieceTombe == 0)
+            {
+                Debug.Log("Victoire Parfaite");
+            }
+
+            else if (nbPieceTombe>0 && nbPieceTombe<=3)
+            {
+                Debug.Log("Victoire");
+            }
+
+            else
+            {
+                Debug.Log("Défaite");
+            }
         }
     }
     private void OnCollisionEnter(Collision collision)
