@@ -492,7 +492,7 @@ Transform:
   m_GameObject: {fileID: 193079380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.6046505, y: 1, z: 3.1661568}
+  m_LocalScale: {x: 7.868153, y: 1, z: 3.1661568}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -651,6 +651,7 @@ MonoBehaviour:
   - {fileID: 5827893476617767113, guid: fc62b273a5a439e48abb0d75b10a3ef0, type: 3}
   - {fileID: -6616016897739152368, guid: 150fb85cc0fea8f4387adbec36133958, type: 3}
   - {fileID: -4027173742665824822, guid: 475a94d075b9beb42930065cc0c6ee4b, type: 3}
+  - {fileID: 4460899837269778770, guid: 76f9efe9600d2ad4fb754c88fde7cd0d, type: 3}
   currentTetromino: {fileID: 0}
   victoire: 0
   nbPieceTombe: 0
