@@ -10,6 +10,7 @@ public class MySceneManager : MonoBehaviour
     public  Dropdown dropdown;
     private int currentIndex;
     private List<string> allScenes;
+    private List<string> unloadedScenes;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class MySceneManager : MonoBehaviour
             return;
         }
 
+        unloadedScenes = allScenes;
         allScenes = dropdown.options.Select(o => o.text).ToList();
     }
     public void SetCurrentIndex(int newIndex)
@@ -26,39 +28,22 @@ public class MySceneManager : MonoBehaviour
     }
     public void LoadSceneAtCurrentIndex()
     {
-        SceneManager.LoadScene(dropdown.options[currentIndex].text);
-    }
-    public void EndOfMinigame(MinigameRating mgRating)
-    {
-        switch (mgRating)
-        {
-            case MinigameRating.Fail:
-                break;
-            default:
-                ManagerManager.GlobalGameManager.MinigamesFinished++;
-                break;
-        }
-
-        if (Consequence(mgRating))
-        {
-            var nextScene = SceneManager.GetActiveScene().name;
-            while(nextScene == SceneManager.GetActiveScene().name)
-            {
-                nextScene = allScenes[Random.Range(0, allScenes.Count)];
-            }
-
-            SceneManager.LoadScene(nextScene);
-        }
-        else
-        {
-            ManagerManager.GlobalGameManager.LoseGame();
-            //Load the lose scene
-        }
+        var textAtIndex = dropdown.options[currentIndex].text;
+        LoadScene(textAtIndex);        
     }
 
-    public bool Consequence(MinigameRating mgRating)
+    public void LoadRandomScene()
     {
-      return ManagerManager.TimeManager.Consequence(mgRating); 
-      return ManagerManager.LifeManager.Consequence(mgRating); 
+        var nextScene = unloadedScenes[Random.Range(0, allScenes.Count)];
+        LoadScene(nextScene);
+    }
+    private void LoadScene (string scene)
+    {
+        unloadedScenes.Remove(scene);
+        if (unloadedScenes.Count <= 1)
+        {
+            unloadedScenes = allScenes;
+        }
+        SceneManager.LoadScene(scene);
     }
 }

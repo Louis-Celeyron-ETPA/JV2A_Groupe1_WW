@@ -7,7 +7,9 @@ public class TestouilleLaGrenouille : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(ManagerManager.DifficultyManager.maxDifficulty);
+        ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+        ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+        ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
     }
 
     // Update is called once per frame

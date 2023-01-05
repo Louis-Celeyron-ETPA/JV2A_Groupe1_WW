@@ -8,11 +8,37 @@ public class GlobalGameManager : MonoBehaviour
     
     public void WinGame()
     {
-        Debug.Log("C'est perdu");
+        Debug.Log("C'est gagné");
     }
 
     public void LoseGame()
     {
-        Debug.Log("C'est gagné");
+        Debug.Log("C'est perdu");
+    }
+    public void EndOfMinigame(MinigameRating mgRating)
+    {
+        switch (mgRating)
+        {
+            case MinigameRating.Fail:
+                break;
+            default:
+                ManagerManager.GlobalGameManager.MinigamesFinished++;
+                break;
+        }
+
+        if (Consequence(mgRating))
+        {
+            ManagerManager.SceneManager.LoadRandomScene();   
+        }
+        else
+        {
+            LoseGame();
+        }
+    }
+
+    public bool Consequence(MinigameRating mgRating)
+    {
+        return ManagerManager.TimeManager.Consequence(mgRating); 
+        return ManagerManager.LifeManager.Consequence(mgRating); 
     }
 }
