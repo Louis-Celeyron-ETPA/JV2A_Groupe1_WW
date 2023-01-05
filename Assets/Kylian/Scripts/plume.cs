@@ -18,8 +18,7 @@ public class plume : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-<<<<<<< HEAD
+    { 
         if (Input.GetKey(KeyCode.D) == true)
         {
             transform.Translate(0.01f, 0, 0);
@@ -31,13 +30,12 @@ public class plume : MonoBehaviour
         }
 
         transform.Translate(0, 0, -0.3f * Time.deltaTime * 3);
-=======
+
         transform.Translate(-1 * Vector3.forward * Time.deltaTime * 1) ;
     }
 
     public void OnTriggerEnter(Collider other)
     {
 
->>>>>>> 59036efe5a6bf0f312e08778e6f8ef30c6789d8f
     }
 }
