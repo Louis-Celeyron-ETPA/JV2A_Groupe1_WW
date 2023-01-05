@@ -829,6 +829,8 @@ GameObject:
   - component: {fileID: 733886712}
   - component: {fileID: 733886715}
   - component: {fileID: 733886714}
+  - component: {fileID: 733886718}
+  - component: {fileID: 733886717}
   m_Layer: 0
   m_Name: ManagerManager
   m_TagString: Untagged
@@ -978,6 +980,34 @@ MonoBehaviour:
   dificultyManager: {fileID: 733886714}
   sceneManager: {fileID: 733886712}
   timeManager: {fileID: 733886715}
+  globalGameManager: {fileID: 733886718}
+  lifeManager: {fileID: 733886717}
+--- !u!114 &733886717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733886711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dfe76a15430414091e3f7dc106bb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLife: 0
+--- !u!114 &733886718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733886711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380237b56207f554790f59b1ec001190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinigamesFinished: 0
 --- !u!1 &821737237
 GameObject:
   m_ObjectHideFlags: 0
