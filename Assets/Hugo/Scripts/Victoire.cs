@@ -26,6 +26,7 @@ namespace Hugo
             if (joueurQuiMeTraverse != null)
             {
                 textVictoire.text = "Victoire!";
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
             }
         }
     }

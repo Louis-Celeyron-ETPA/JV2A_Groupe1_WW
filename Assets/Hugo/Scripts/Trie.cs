@@ -2,51 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trie : MonoBehaviour
+
+namespace Hugo
 {
-    public KeyCode myKey;
-    public Transform thierry;
-    public string couleur;
-    public Selecteur score;
-    public bool verifCouleur=false;
-    //public Selecteur scoreBleu;
-    // Start is called before the first frame update
-    void Start()
+    public class Trie : MonoBehaviour
     {
-        score = FindObjectOfType<Selecteur>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*if (Input.GetKey(KeyCode.Q) == true)
+        public KeyCode myKey;
+        public Transform thierry;
+        public string couleur;
+        public Selecteur score;
+        public bool verifCouleur = false;
+        //public Selecteur scoreBleu;
+        // Start is called before the first frame update
+        void Start()
         {
-            thierry.position = new Vector3(28, 1, -1);
-            VerifieCouleur();
+            score = FindObjectOfType<Selecteur>();
         }
 
-        if (Input.GetKey(KeyCode.D) == true)
+        // Update is called once per frame
+        void Update()
         {
-            thierry.position = new Vector3(-28, 1, -1);
-            VerifieCouleur();
-        }
-        */
-
-        if (verifCouleur == false)
-        {
-            if (thierry.position.x <= -17 && couleur == "rouge")
+            /*if (Input.GetKey(KeyCode.Q) == true)
             {
-                //compt = compt + 1;
-                score.scoreRouge = score.scoreRouge + 1;
-                verifCouleur = true;
-        }
-            if (thierry.position.x >= 20 && couleur == "bleu")
+                thierry.position = new Vector3(28, 1, -1);
+                VerifieCouleur();
+            }
+
+            if (Input.GetKey(KeyCode.D) == true)
             {
-                //compt = compt + 1;
-                score.scoreBleu = score.scoreBleu + 1;
-                verifCouleur = true;
+                thierry.position = new Vector3(-28, 1, -1);
+                VerifieCouleur();
+            }
+            */
+
+            if (verifCouleur == false)
+            {
+                if (thierry.position.x <= -17 && couleur == "rouge")
+                {
+                    //compt = compt + 1;
+                    score.scoreRouge = score.scoreRouge + 1;
+                    verifCouleur = true;
+                }
+                if (thierry.position.x >= 20 && couleur == "bleu")
+                {
+                    //compt = compt + 1;
+                    score.scoreBleu = score.scoreBleu + 1;
+                    verifCouleur = true;
+                }
             }
         }
-    }
 
+    }
 }

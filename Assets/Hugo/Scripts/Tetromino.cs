@@ -2,45 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tetromino : MonoBehaviour
+
+namespace Hugo
 {
-
-    public Tetris tetrisManager;
-    public bool touche=false;
-    public bool tombe = false;
-    /*public Transform thierry;
-    public float speedMax = 1f;
-    public float acceleration = 0.01f;
-    public float tempSpeedY = 0;*/
-    // Start is called before the first frame update
-    void Start()
+    public class Tetromino : MonoBehaviour
     {
-        /*tempSpeedY += acceleration;
-        tempSpeedY = Mathf.Clamp(tempSpeedY,0, speedMax);
-        thierry.position += -thierry.forward * tempSpeedY;*/
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "brick" && touche == false)
+        public Tetris tetrisManager;
+        public bool touche = false;
+        public bool tombe = false;
+        /*public Transform thierry;
+        public float speedMax = 1f;
+        public float acceleration = 0.01f;
+        public float tempSpeedY = 0;*/
+        // Start is called before the first frame update
+        void Start()
         {
-          touche = true;
-          tetrisManager.OnCollisionConsequence();
+            /*tempSpeedY += acceleration;
+            tempSpeedY = Mathf.Clamp(tempSpeedY,0, speedMax);
+            thierry.position += -thierry.forward * tempSpeedY;*/
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "out" && tombe == false)
+        // Update is called once per frame
+        void Update()
         {
-          tetrisManager.nbPieceTombe = tetrisManager.nbPieceTombe + 1;
-          Debug.Log(tetrisManager.nbPieceTombe);
-          tombe = true;
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "brick" && touche == false)
+            {
+                touche = true;
+                tetrisManager.OnCollisionConsequence();
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag == "out" && tombe == false)
+            {
+                tetrisManager.nbPieceTombe = tetrisManager.nbPieceTombe + 1;
+                Debug.Log(tetrisManager.nbPieceTombe);
+                tombe = true;
+            }
         }
     }
 }
