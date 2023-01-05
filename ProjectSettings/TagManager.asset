@@ -14,6 +14,8 @@ TagManager:
   - morceau_5
   - morceau_3
   - Player3
+  - timer02
+  - Text
   layers:
   - Default
   - TransparentFX
