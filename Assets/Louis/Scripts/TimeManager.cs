@@ -10,9 +10,8 @@ public class TimeManager : MonoBehaviour
     [SerializeField]
     private float perfectTimeAdded = 30, normalTimeAdded=15, failTimeAdded=-15;
     public bool debugTimer = true;
-
     public GUIStyle style;
-
+    private bool pause;
     private void Start()
     {
         style.normal.textColor = Color.blue;
@@ -21,7 +20,10 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        globalTime -= Time.deltaTime;
+        if (!pause)
+        {
+            globalTime -= Time.deltaTime;
+        }
       
     }
 
