@@ -2,19 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+    
+public class GameOverFish : MonoBehaviour
 
-    public class FishMovement : MonoBehaviour
 {
-
+    public GameObject GameOverSprite;
     float velocity = 0;
-
 
     public float ySpeed;
     public float yTarget;
-    // Start is called before the first frame update
+
+    void GameOver()
+    {
+        Destroy(gameObject);
+        GameOverSprite.SetActive(true);
+    }
+
+
+    // Start is called before the first fra
+    // me update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -26,5 +35,12 @@ using UnityEngine;
         {
             velocity = 0.15f;
         }
+
+        if (transform.position.y < -5)
+        {
+            GameOver();
+        }
     }
 }
+
+
