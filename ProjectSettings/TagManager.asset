@@ -4,10 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - brick
+  - Bottle
+  - Bagnole
   - Boule_neige
-  - TrucBleu
-  - TrucRose
   - TrucRouge
+  - TrucRose
+  - TrucBleu
+  - Route_L
+  - Route_R
   layers:
   - Default
   - TransparentFX

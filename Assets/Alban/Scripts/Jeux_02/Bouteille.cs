@@ -8,7 +8,6 @@ namespace Alban
     {
 
         public Transform bottle;
-        public float bottleRemaining = 10;
         public TextMesh bottles;
 
         // Start is called before the first frame update
@@ -20,19 +19,17 @@ namespace Alban
         // Update is called once per frame
         void Update()
         {
-            if (bottleRemaining == 0)
-            {
-                Debug.LogError("Victoire !");
-            }
+
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            var bullet = FindObjectOfType<Tir>();
-            if (bullet != null)
+            var scoreKeeper = FindObjectOfType<Decompte_Boutille>();
+
+            if(scoreKeeper !=null)
             {
+                scoreKeeper.Truc();
                 Destroy(gameObject);
-                bottleRemaining -= 1;
             }
         }
     }

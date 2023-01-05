@@ -30,7 +30,6 @@ namespace Alban{
         private void OnTriggerEnter(Collider other)
         {
             var timer = FindObjectOfType<Timer>();
-            var timeIsRemaining = FindObjectOfType<Timer>();
             if (timer != null)
             {
 
