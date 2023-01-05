@@ -7,6 +7,7 @@ namespace Hugo
 {
     public class Tetromino : MonoBehaviour
     {
+        public Rigidbody rigidbody;
 
         public Tetris tetrisManager;
         public bool touche = false;
@@ -45,6 +46,18 @@ namespace Hugo
                 Debug.Log(tetrisManager.nbPieceTombe);
                 tombe = true;
             }
+        }
+
+        void FixedUpdate()
+        {
+            var currentVelocity = rigidbody.velocity;
+
+            if (currentVelocity.y <= 0f)
+                return;
+
+            currentVelocity.y = 0f;
+
+            rigidbody.velocity = currentVelocity;
         }
     }
 }

@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e89d07fed89a34fa027fcc46c984ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody: {fileID: 8123204893306765577}
   tetrisManager: {fileID: 0}
   touche: 0
   tombe: 0
