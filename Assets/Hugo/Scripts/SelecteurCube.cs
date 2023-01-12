@@ -6,7 +6,7 @@ using TMPro;
 
 namespace Hugo
 {
-    public class Selecteur : MonoBehaviour
+    public class SelecteurCube : MonoBehaviour
     {
         public List<Trie> cubeSelect = new List<Trie>();
         private Renderer mr;
@@ -17,6 +17,8 @@ namespace Hugo
         public int scoreRouge;
         public int scoreBleu;
         public bool victoire = false;
+
+        private bool doOnce = false;
         // Start is called before the first frame update
         void Start()
         {
@@ -88,6 +90,33 @@ namespace Hugo
                 }
 
             }
+        }
+
+        public void left()
+        {
+            if(!doOnce)
+            {
+                doOnce = true;
+                cubeSelect[i].transform.position = new Vector3(-22, -1, -1);
+                i++;
+                actionCube();
+            }
+        }
+
+        public void right()
+        {
+            if(!doOnce)
+            {
+                doOnce = true;
+                cubeSelect[i].transform.position = new Vector3(28, 1, -1);
+                i++;
+                actionCube();
+            }
+        }
+
+        public void ResetDoOnce()
+        {
+            doOnce = false;
         }
 
         //private void VerifCouleur()

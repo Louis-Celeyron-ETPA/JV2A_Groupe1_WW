@@ -52,7 +52,7 @@ namespace Hugo
 
         private void GenerateTetromino()
         {
-            if (index < 15)
+            if (index < 10)
             {
                 currentTetromino = Instantiate(cubeSelectPrefab[Random.Range(0, cubeSelectPrefab.Count)], tetrominoSpawn);
                 currentTetromino.tetrisManager = this;

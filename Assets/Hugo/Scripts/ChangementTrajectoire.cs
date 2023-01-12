@@ -4,20 +4,8 @@ using UnityEngine;
 
 namespace Hugo
 {
-    public class Chang : MonoBehaviour
+    public class ChangementTrajectoire : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
 
         private void OnTriggerEnter(Collider other)
         {

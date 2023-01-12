@@ -10,13 +10,13 @@ namespace Hugo
         public KeyCode myKey;
         public Transform thierry;
         public string couleur;
-        public Selecteur score;
+        public SelecteurCube score;
         public bool verifCouleur = false;
         //public Selecteur scoreBleu;
         // Start is called before the first frame update
         void Start()
         {
-            score = FindObjectOfType<Selecteur>();
+            score = FindObjectOfType<SelecteurCube>();
         }
 
         // Update is called once per frame
