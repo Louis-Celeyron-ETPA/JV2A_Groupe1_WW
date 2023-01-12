@@ -27,4 +27,10 @@ using UnityEngine;
             velocity = 0.15f;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+    }
+        
 }
