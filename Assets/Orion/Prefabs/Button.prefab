@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4142041026204185991}
   - component: {fileID: 4142041026204185990}
   - component: {fileID: 4142041026204185985}
+  - component: {fileID: 8460548630548504865}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -104,7 +105,7 @@ RectTransform:
   m_GameObject: {fileID: 4142041026204185987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.32374352, y: 0.93555, z: 1}
+  m_LocalScale: {x: 0.75, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 322002658841607656}
@@ -197,4 +198,30 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4142041026204185990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8460548630548504865}
+        m_TargetAssemblyTypeName: Orion.ButtonScript, Assembly-CSharp
+        m_MethodName: IngredientSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8460548630548504865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142041026204185987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb8fb593346c2b44bb17aadd3e77de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assignedIngredient: {fileID: 0}
+  spawner: {fileID: 0}

@@ -9,7 +9,9 @@ namespace Orion
         // Start is called before the first frame update
         public string ingredientName;
         public Sprite ingredientSprite;
-        public GameObject prefab;
+        public SpriteRenderer spriteRenderer;
+        public Ingredient prefab;
+
 
         void Start()
         {
@@ -24,7 +26,9 @@ namespace Orion
 
         public void Instantiation(Vector3 vector)
         {
-            Instantiate(prefab, vector, Quaternion.identity);
+            Ingredient thisInstance = Instantiate(prefab, vector, Quaternion.identity);
+            thisInstance.spriteRenderer.sortingOrder = IngredientManager.layerOrder;
+            IngredientManager.layerOrder++;
         }
     }
 }

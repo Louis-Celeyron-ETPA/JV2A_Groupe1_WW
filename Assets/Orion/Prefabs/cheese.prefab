@@ -148,4 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: cheese
   ingredientSprite: {fileID: 21300000, guid: 36afae96b20bcac46b9d4231a92a43a4, type: 3}
-  prefab: {fileID: 6036293316187928965}
+  spriteRenderer: {fileID: 6036293316187928964}
+  prefab: {fileID: 8056320988160389987}
+  ingredientManager: {fileID: 0}

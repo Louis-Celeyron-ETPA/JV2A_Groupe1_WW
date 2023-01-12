@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 2fb168e6093a57d478f3e50c9cfa2fa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,4 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: salad
   ingredientSprite: {fileID: 21300000, guid: 2fb168e6093a57d478f3e50c9cfa2fa9, type: 3}
-  prefab: {fileID: 5202610044401983614}
+  spriteRenderer: {fileID: 5202610044401983615}
+  prefab: {fileID: 9031974554890973556}
