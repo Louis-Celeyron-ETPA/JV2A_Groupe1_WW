@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Collider_voiture : MonoBehaviour
 {
@@ -12,6 +11,10 @@ public class Collider_voiture : MonoBehaviour
     bool collide;
     public string tagToCollider;
     public Rigidbody rgbd;
+    public int monScore = 0;
+
+    public TextMeshProUGUI monTexte;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,15 +26,20 @@ public class Collider_voiture : MonoBehaviour
     void Update()
     {
         collide = false;
+
+        monTexte.text = "Score : " + monScore.ToString();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collisioN)
     {
-        if (collision.transform.tag == tagToCollider)
+        if (collisioN.transform.gameObject.GetComponent<Ennemi_deplacement>() != null)
         {
-            collide = true;
+            if (collisioN.transform.gameObject.GetComponent<Ennemi_deplacement>().toucher == false)
+            {
+                monScore++;
+                collisioN.transform.gameObject.GetComponent<Ennemi_deplacement>().toucher = true;
+            }
         }
 
     }
 }
-

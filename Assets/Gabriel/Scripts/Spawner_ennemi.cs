@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Osborne
+namespace Gabriel
 {
 
     public class Spawner_ennemi : MonoBehaviour

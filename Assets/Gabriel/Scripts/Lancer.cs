@@ -9,6 +9,7 @@ namespace Gabriel
     {
         public Transform boule_de_neige;
         public float speed = 0.4f;
+        public bool toucher = false;
 
         public bool shouldGo;
         // Start is called before the first frame update

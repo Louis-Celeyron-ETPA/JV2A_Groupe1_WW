@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner_Lignes : MonoBehaviour
 {
     public float delay = 2f;
-    public GameObject blue_car;
+    public GameObject ligne;
     public Transform[] spawnOrigin;
 
     // Start is called before the first frame update
@@ -26,6 +26,6 @@ public class Spawner_Lignes : MonoBehaviour
     void Spawn()
     {
         var trie = Random.Range(0, 3);
-        Instantiate(blue_car, spawnOrigin[trie]);
+        Instantiate(ligne, spawnOrigin[trie]);
     }
 }

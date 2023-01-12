@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Collider_Lancer : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class Collider_Lancer : MonoBehaviour
     public Color[] colors;
     bool collide;
     public Transform boule;
+    public int monScore = 0;
+
+    public TextMeshProUGUI monTexte;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +24,22 @@ public class Collider_Lancer : MonoBehaviour
     void Update()
     {
         collide = false;
+
+        monTexte.text = "Score : " + monScore.ToString();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         
+        var lancer = other.transform.gameObject.GetComponent<Gabriel.Lancer>();
+        if (lancer != null)
+        {
+            if (lancer.toucher == false)
+            {
+                monScore++;
+                lancer.toucher = true;
+            }
+        }
         print("COLISION");
         if (other.gameObject.CompareTag("Boule_neige"))
         {
@@ -38,4 +54,5 @@ public class Collider_Lancer : MonoBehaviour
         }
 
     }
+
 }
