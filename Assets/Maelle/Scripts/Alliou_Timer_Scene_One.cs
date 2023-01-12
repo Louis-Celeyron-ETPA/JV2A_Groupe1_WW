@@ -6,35 +6,34 @@ using TMPro;
 
 public class Alliou_Timer_Scene_One : MonoBehaviour
 {
-    public class Timer : MonoBehaviour
+    public float timeT = 20;
+    public bool timeActive = false;
+    public TextMeshProUGUI displayText;
+
+    // Start is called before the first frame update
+    private void Start()
     {
-        public float timeT = 0;
-        public bool timeActive = false;
-        public Text displayText;
-        public object timeText;
+        timeActive = true;
+    }
 
-        // Start is called before the first frame update
-        void Start()
+    // Update is called once per frame
+    void Update()
+    {
+        if (timeActive == true)
         {
-            timeActive = true;
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            if (timeActive == true)
+            if (timeT > 0)
             {
-                if (timeT > 0)
-                {
-                    timeT -= Time.deltaTime;
-                }
+                timeT -= Time.deltaTime;
             }
         }
-        void DisplayTime(float timeToDisplay)
-        {
-            //timeToDisplay += 1;
-            float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-            timeText = string.Format("{0:00}", seconds);
-        }
+
+        DisplayTime(timeT);
     }
-}  
+    void DisplayTime(float timeToDisplay)
+    {
+        //timeToDisplay += 1;
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        Debug.Log(displayText);
+        displayText.text = string.Format("{0:00}", seconds);
+    }
+}

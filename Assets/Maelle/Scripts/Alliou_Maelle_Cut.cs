@@ -7,6 +7,7 @@ public class Alliou_Maelle_Cut : MonoBehaviour
     public KeyCode myKey;
     public Vector3 positioninitiale;
     public Transform legume;
+    public float right = 500;
     // Start is called before the first frame update
     void Start()
     {
