@@ -10,9 +10,12 @@ namespace Alban
     public class Timer_03 : MonoBehaviour
     {
 
-        public float timeRemaining = 5;
+        public float timeRemaining = 15;
         public bool timeIsRunning = false;
         public TextMeshProUGUI timeText;
+        public TextMeshProUGUI lifeText;
+        public int life = 3;
+
 
         private void Start()
         {
@@ -20,7 +23,6 @@ namespace Alban
         }
         void Update()
         {
-            var life = FindObjectOfType<Life>().chances;
 
             if (timeIsRunning == true  && timeRemaining > 0)
             { 
@@ -51,12 +53,17 @@ namespace Alban
 
 
             DisplayTime(timeRemaining);
+            DisplayLife();
         }
         void DisplayTime(float timeToDisplay)
         {
-            //timeToDisplay += 1;
             float seconds = Mathf.FloorToInt(timeToDisplay % 60);
             timeText.text = string.Format("{0:00}", seconds);
+        }
+
+        void DisplayLife()
+        {
+            lifeText.text = "Vie = " + life;
         }
     }
 }

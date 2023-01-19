@@ -23,7 +23,6 @@ namespace Alban{
         {
             transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
             rgbd.MovePosition(transform.position + (transform.forward * mooveSpeed * Time.deltaTime));
-            //myTransform.Translate(Vector3.forward * mooveSpeed * Time.deltaTime);
         }
 
 

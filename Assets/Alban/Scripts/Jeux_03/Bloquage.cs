@@ -4,12 +4,8 @@ using UnityEngine;
 
 namespace Alban
 {
-
-    public class MouvementFood : MonoBehaviour
+    public class Bloquage : MonoBehaviour
     {
-
-        public Transform Nourriture;
-        public float speedMax = 0.05f;
 
         // Start is called before the first frame update
         void Start()
@@ -21,19 +17,24 @@ namespace Alban
         void Update()
         {
 
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+
             var timer03 = FindObjectOfType<Timer_03>();
 
-            Nourriture.position += Nourriture.right * speedMax;
-
-            if (Nourriture.position.x >= 5)
+            if (other.tag == "Bad")
             {
-                Destroy(gameObject);
+                Destroy(other.gameObject);
 
-                if(tag == "Bad")
-                {
-                    timer03.life -= 1;
-                }
+            }
+            if (other.tag == "Good")
+            {
+                Destroy(other.gameObject);
+                timer03.life -= 1;
             }
         }
+
     }
 }
