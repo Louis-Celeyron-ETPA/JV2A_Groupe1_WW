@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Aurelien
 {
-    public class pieces : MonoBehaviour
+    public class Piece : MonoBehaviour
     {
 
         public Transform piece;

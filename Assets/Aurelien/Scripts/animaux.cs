@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Aurelien
 {
-    public class animaux : MonoBehaviour
+    public class Animaux : MonoBehaviour
     {
         public Transform animal;
         // Start is called before the first frame update

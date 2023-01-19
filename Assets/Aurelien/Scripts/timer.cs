@@ -6,7 +6,7 @@ using TMPro;
 
 namespace Aurelien
 {
-    public class timer : MonoBehaviour
+    public class Timer : MonoBehaviour
     {
         public float timeRemaining = 15;
         public bool timeIsRunning = false;

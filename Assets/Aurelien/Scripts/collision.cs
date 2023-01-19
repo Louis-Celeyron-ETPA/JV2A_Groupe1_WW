@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Aurelien
 {
 
-    public class collision : MonoBehaviour
+    public class Collision : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()

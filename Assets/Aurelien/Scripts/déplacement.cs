@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Aurelien
 {
 
-    public class déplacement : MonoBehaviour
+    public class Déplacement : MonoBehaviour
     {
         public KeyCode myKey;
         public Transform thierry;

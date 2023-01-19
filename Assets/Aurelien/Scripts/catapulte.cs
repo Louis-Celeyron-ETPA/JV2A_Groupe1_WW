@@ -7,7 +7,7 @@ namespace Aurelien
 {
 
 
-    public class catapulte : MonoBehaviour
+    public class Catapulte : MonoBehaviour
     {
         public float speedMax = 1000f;
         public KeyCode myKey;
@@ -15,7 +15,7 @@ namespace Aurelien
         public Rigidbody rgbd;
         public bool IsFired = false;
         public float power = 2000000000, powerMax = 2000000000;
-        public jauge valeurJauge; 
+        public Jauge valeurJauge; 
 
     // Start is called before the first frame update
     void Start()

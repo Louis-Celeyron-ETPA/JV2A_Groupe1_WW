@@ -23,7 +23,17 @@ namespace Aurelien
 
             if (pieceRemaining == 0)
             {
-                Debug.LogError("Victoire !");
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
+            }
+
+            if (pieceRemaining <= 5)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+            }
+
+            if (pieceRemaining >= 5)
+            {
+                ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
 
             NombrePieceRestante.text = "Pieces Restantes : " + pieceRemaining;

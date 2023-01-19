@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Aurelien
 {
 
-    public class jauge : MonoBehaviour
+    public class Jauge : MonoBehaviour
     {
         public Transform barre;
         public bool stop;
