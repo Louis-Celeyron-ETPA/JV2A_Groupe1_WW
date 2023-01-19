@@ -14,31 +14,17 @@ namespace Orion
         public Button buttonPrefab;
         public Transform ingredientSpawner;
         public IngredientManager ingredientManager;
-        public UnityEventQueueSystem eventSystem;
 
         // Start is called before the first frame update
         void Start()
         {
             Shuffle();
-            var newX = transform.position.x;
             for (int i = 0; i < ingredientsList.Length; i++)
             {
-                Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z);
-                transform.position = newPosition;
-                Button thisInstance = Instantiate(buttonPrefab, newPosition, Quaternion.identity, parent);
-                if (i == 0)
-                {
-                    var eventSystem = EventSystem.current;
-                    eventSystem.SetSelectedGameObject(thisInstance.gameObject, new BaseEventData(eventSystem));
-                }
+                GameObject thisInstance = parent.GetChild(i).gameObject;
                 ButtonScript buttonScript = thisInstance.GetComponent<ButtonScript>();
                 buttonScript.assignedIngredient = ingredientsList[i];
-                buttonScript.spawner = ingredientSpawner;
-                buttonScript.ingredientManager = ingredientManager;
-                newX += Spacing();
             }
-
-            Destroy(this.gameObject);
 
         }
 
@@ -59,11 +45,6 @@ namespace Orion
             }
         }
 
-        public float Spacing()
-        {
-            var spacing = Screen.width * (130f / 756f);
-            return spacing;
-        }
     }
 }
 

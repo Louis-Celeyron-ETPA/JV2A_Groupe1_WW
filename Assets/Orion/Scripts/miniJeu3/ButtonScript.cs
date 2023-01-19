@@ -16,13 +16,13 @@ namespace Orion
     // Start is called before the first frame update
     void Start()
         {
-            img.sprite = assignedIngredient.ingredientSprite;
+            
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            img.sprite = assignedIngredient.ingredientSprite;
         }
 
 
