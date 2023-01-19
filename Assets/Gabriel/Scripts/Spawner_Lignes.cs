@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Gabriel
+{ 
+
 public class Spawner_Lignes : MonoBehaviour
 {
-    public float delay = 2f;
+    public float delay = 1f;
     public GameObject ligne;
-    public Transform[] spawnOrigin;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,8 @@ public class Spawner_Lignes : MonoBehaviour
 
     void Spawn()
     {
-        var trie = Random.Range(0, 3);
-        Instantiate(ligne, spawnOrigin[trie]);
+        Instantiate(ligne, transform);
     }
+}
+
 }
