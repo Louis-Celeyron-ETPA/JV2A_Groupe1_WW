@@ -49,7 +49,24 @@ namespace Hugo
 
                 //VerifieCouleur();
             }
-            else if (i >= cubeSelect.Count && victoire == false)
+        }
+
+        private void actionCube()
+        {
+            if (i < cubeSelect.Count)
+            {
+                mr = cubeSelect[i].GetComponent<Renderer>();
+                //mr.material.color = new Color(0f, 0f, 1f, 1f);
+                if (cubeSelect[i].couleur == "bleu")
+                {
+                    mr.material.color = new Color(0f, 0f, 1f, 1f);
+                }
+                if (cubeSelect[i].couleur == "rouge")
+                {
+                    mr.material.color = new Color(1f, 0f, 0f, 0f);
+                }
+            }
+            if (i >= cubeSelect.Count && victoire == false)
             {
                 textRouge.text = scoreRouge.ToString();
                 textBleu.text = scoreBleu.ToString();
@@ -74,30 +91,13 @@ namespace Hugo
             }
         }
 
-        private void actionCube()
-        {
-            if (i < cubeSelect.Count)
-            {
-                mr = cubeSelect[i].GetComponent<Renderer>();
-                //mr.material.color = new Color(0f, 0f, 1f, 1f);
-                if (cubeSelect[i].couleur == "bleu")
-                {
-                    mr.material.color = new Color(0f, 0f, 1f, 1f);
-                }
-                if (cubeSelect[i].couleur == "rouge")
-                {
-                    mr.material.color = new Color(1f, 0f, 0f, 0f);
-                }
-
-            }
-        }
-
         public void left()
         {
             if(!doOnce)
             {
                 doOnce = true;
                 cubeSelect[i].transform.position = new Vector3(-22, -1, -1);
+                cubeSelect[i].CheckTrie(this);
                 i++;
                 actionCube();
             }
@@ -109,6 +109,7 @@ namespace Hugo
             {
                 doOnce = true;
                 cubeSelect[i].transform.position = new Vector3(28, 1, -1);
+                cubeSelect[i].CheckTrie(this);
                 i++;
                 actionCube();
             }
