@@ -11,9 +11,6 @@ namespace Alban
         public bool timeIsRunning = false;
         public TextMesh timeText;
 
-        public float timeRemaining2 = 10;
-        public bool timeIsRunning2 = false;
-
         private void Start()
         {
             timeIsRunning = true;

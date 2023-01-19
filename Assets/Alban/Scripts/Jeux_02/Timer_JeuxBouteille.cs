@@ -6,7 +6,7 @@ using TMPro;
 
 namespace Alban
 {
-    public class Timer_02 : MonoBehaviour
+    public class Timer_JeuxBouteille : MonoBehaviour
     {
         public float timeRemaining = 15;
         public bool timeIsRunning = false;
