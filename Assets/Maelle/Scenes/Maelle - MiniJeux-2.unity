@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 26393088}
   - component: {fileID: 26393087}
   m_Layer: 0
-  m_Name: table_alliou (4)
+  m_Name: etagere_3_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &147716807
 GameObject:
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 163879708}
   - component: {fileID: 163879711}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Main_Camera_S2
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 260263287}
   - component: {fileID: 260263286}
   m_Layer: 0
-  m_Name: plante_01 (5)
+  m_Name: plante_06_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -513,7 +513,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -179.801, z: 0}
 --- !u!1 &334105069
 GameObject:
@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 334105071}
   - component: {fileID: 334105070}
   m_Layer: 0
-  m_Name: pot_01 (4)
+  m_Name: pot_05_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,7 +623,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -179.258, z: 0}
 --- !u!1 &405200126
 GameObject:
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 405200128}
   - component: {fileID: 405200127}
   m_Layer: 0
-  m_Name: table_alliou (2)
+  m_Name: etagere_2_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424768199
 GameObject:
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 424768205}
   - component: {fileID: 424768206}
   m_Layer: 0
-  m_Name: point_eau_alliou
+  m_Name: point_eau_alliou_S2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 487724261}
   - component: {fileID: 487724260}
   m_Layer: 0
-  m_Name: coteeee
+  m_Name: fond_alliou_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 492656308}
   - component: {fileID: 492656307}
   m_Layer: 0
-  m_Name: coteeee (2)
+  m_Name: down_alliou_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1076,7 +1076,7 @@ GameObject:
   - component: {fileID: 502459206}
   - component: {fileID: 502459205}
   m_Layer: 0
-  m_Name: table_alliou
+  m_Name: table_alliou_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1158,7 +1158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &533803995
 GameObject:
@@ -1345,7 +1345,7 @@ GameObject:
   - component: {fileID: 570848238}
   - component: {fileID: 570848237}
   m_Layer: 0
-  m_Name: plane_alliou
+  m_Name: plane_alliou_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1444,7 +1444,7 @@ GameObject:
   - component: {fileID: 610515034}
   - component: {fileID: 610515033}
   m_Layer: 0
-  m_Name: pot_01 (5)
+  m_Name: pot_06_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,7 +1538,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -179.258, z: 0}
 --- !u!1 &633815083
 GameObject:
@@ -1553,7 +1553,7 @@ GameObject:
   - component: {fileID: 633815085}
   - component: {fileID: 633815084}
   m_Layer: 0
-  m_Name: plante_01 (3)
+  m_Name: plante_05_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1636,7 +1636,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -179.801, z: 0}
 --- !u!1 &673556735
 GameObject:
@@ -1651,7 +1651,7 @@ GameObject:
   - component: {fileID: 673556737}
   - component: {fileID: 673556736}
   m_Layer: 0
-  m_Name: plante_01 (1)
+  m_Name: plante_02_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1734,7 +1734,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -179.801, z: 0}
 --- !u!1 &776204619
 GameObject:
@@ -1751,7 +1751,7 @@ GameObject:
   - component: {fileID: 776204624}
   - component: {fileID: 776204625}
   m_Layer: 0
-  m_Name: eau_alliou
+  m_Name: eau_alliou_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1881,7 +1881,7 @@ GameObject:
   - component: {fileID: 830005989}
   - component: {fileID: 830005988}
   m_Layer: 0
-  m_Name: coteeee (1)
+  m_Name: top_alliou_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1979,7 +1979,7 @@ GameObject:
   - component: {fileID: 843056308}
   - component: {fileID: 843056307}
   m_Layer: 0
-  m_Name: pot_01 (1)
+  m_Name: pot_02_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2073,7 +2073,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -179.258, z: 0}
 --- !u!1 &885611455
 GameObject:
@@ -2086,7 +2086,7 @@ GameObject:
   - component: {fileID: 885611457}
   - component: {fileID: 885611456}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Directional_Light_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2183,7 +2183,7 @@ GameObject:
   - component: {fileID: 914301874}
   - component: {fileID: 914301873}
   m_Layer: 0
-  m_Name: pot_01 (3)
+  m_Name: pot_04_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2277,7 +2277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -179.258, z: 0}
 --- !u!1 &930389846
 GameObject:
@@ -2293,7 +2293,7 @@ GameObject:
   - component: {fileID: 930389848}
   - component: {fileID: 930389847}
   m_Layer: 0
-  m_Name: pot_01 (2)
+  m_Name: pot_03_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2387,7 +2387,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -179.258, z: 0}
 --- !u!1 &936276642
 GameObject:
@@ -2403,7 +2403,7 @@ GameObject:
   - component: {fileID: 936276643}
   - component: {fileID: 936276647}
   m_Layer: 0
-  m_Name: pot_01
+  m_Name: pot_01_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2517,7 +2517,7 @@ GameObject:
   - component: {fileID: 1073267228}
   - component: {fileID: 1073267227}
   m_Layer: 0
-  m_Name: table_alliou (3)
+  m_Name: table_alliou_2_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2943,7 +2943,7 @@ GameObject:
   - component: {fileID: 1617130807}
   - component: {fileID: 1617130806}
   m_Layer: 0
-  m_Name: table_alliou (1)
+  m_Name: etagere_1_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3025,7 +3025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1649008472
 GameObject:
@@ -3108,7 +3108,7 @@ GameObject:
   - component: {fileID: 1713477733}
   - component: {fileID: 1713477732}
   m_Layer: 0
-  m_Name: plante_01 (4)
+  m_Name: plante_04_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3191,7 +3191,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -179.801, z: 0}
 --- !u!1 &1785369984
 GameObject:
@@ -3206,7 +3206,7 @@ GameObject:
   - component: {fileID: 1785369986}
   - component: {fileID: 1785369985}
   m_Layer: 0
-  m_Name: plante_01 (2)
+  m_Name: plante_03_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3289,7 +3289,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -179.801, z: 0}
 --- !u!1 &1895171613
 GameObject:
@@ -3304,7 +3304,7 @@ GameObject:
   - component: {fileID: 1895171615}
   - component: {fileID: 1895171614}
   m_Layer: 0
-  m_Name: plante_01
+  m_Name: plante_01_S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3456,6 +3456,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4615d662a31d62145a7a52ce36554311, type: 2}
+    - target: {fileID: -7757217299562787157, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: entonoir_arrosoir_S2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7700262558173149782, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: liaison_arrosoir_S2
+      objectReference: {fileID: 0}
     - target: {fileID: -6942716095346431677, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3464,10 +3472,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4615d662a31d62145a7a52ce36554311, type: 2}
+    - target: {fileID: -4732016171250579227, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: base_arrosoir_S2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3665484258742565292, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: up_1_arrosoir_S2
+      objectReference: {fileID: 0}
     - target: {fileID: -3127777333732671918, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4615d662a31d62145a7a52ce36554311, type: 2}
+    - target: {fileID: -1906961671608891664, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: poignee_arrosoir_S2
+      objectReference: {fileID: 0}
     - target: {fileID: -1839208734412154006, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3478,7 +3498,23 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0ec3847a05c42d649a1edf6ece3d660d, type: 2}
     - target: {fileID: 919132149155446097, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
       propertyPath: m_Name
-      value: arrosoir_alliou2
+      value: arrosoir_alliou_S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415739201960254486, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: up_2_arrosoir_S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278284271823263201, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: tube_2_arrosoir_S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305112156298633208, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: jointure_arrosoir_S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597212383662452419, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
+      propertyPath: m_Name
+      value: tube_arrosoir_S2
       objectReference: {fileID: 0}
     - target: {fileID: 6872945752586925570, guid: c842c2c87b043f14f986d1579dd4dd14, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3504,7 +3540,7 @@ GameObject:
   - component: {fileID: 2121741504}
   - component: {fileID: 2121741503}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas_S2
   m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
