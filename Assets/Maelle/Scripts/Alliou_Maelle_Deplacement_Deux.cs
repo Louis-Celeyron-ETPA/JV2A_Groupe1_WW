@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alliou_Maelle_Deplacement2 : MonoBehaviour
+public class Alliou_Maelle_Deplacement_Deux: MonoBehaviour
 {
     public KeyCode myKey;
     public Vector3 positioninitiale;
