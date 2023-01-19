@@ -12,6 +12,7 @@ namespace Gabriel
         public float timeRemaining = 20;
         public bool timeIsRunning = false;
         public TextMeshProUGUI timeText;
+        private bool Victoire;
 
         private void Start()
         {
@@ -36,7 +37,20 @@ namespace Gabriel
             //timeToDisplay += 1;
             float seconds = Mathf.FloorToInt(timeToDisplay % 60);
             timeText.text = string.Format("{0:00}", seconds);
+
+            if (timeRemaining == 0)
+            {
+                if (Victoire == true)
+                {
+                    ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+                }
+                else
+                {
+                    ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+                }
+            }
         }
     }
+
 
 }

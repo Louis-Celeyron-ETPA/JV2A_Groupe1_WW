@@ -16,15 +16,15 @@ public class Voiture_deplacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) == true)
-        {
-            rgbd.MovePosition(voiture.position + Vector3.right * speed);
 
-        }
+    }
+    public void MoveRight()
+    {
+        rgbd.MovePosition(voiture.position + Vector3.right * speed);
+    }
 
-        if (Input.GetKey(KeyCode.Q) == true)
-        {
-            rgbd.MovePosition(voiture.position + Vector3.left * speed);
-        }
+    public void MoveLeft()
+    {
+        rgbd.MovePosition(voiture.position + Vector3.left * speed);
     }
 }

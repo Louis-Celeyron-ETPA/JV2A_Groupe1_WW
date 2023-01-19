@@ -7,7 +7,7 @@ namespace Gabriel
 
 public class Spawner_Lignes : MonoBehaviour
 {
-    public float delay = 1f;
+    public float delayLigne = 1f;
     public GameObject ligne;
 
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class Spawner_Lignes : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(delayLigne);
             Spawn();
         }
     }
