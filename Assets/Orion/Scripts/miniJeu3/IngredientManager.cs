@@ -6,8 +6,9 @@ namespace Orion
 {
     public class IngredientManager : MonoBehaviour
     {
-        public Ingredient[] ingredientsSpawned;
-        public static int layerOrder = 5;
+        public List<Ingredient> ingredientsSpawned = new List<Ingredient>();
+        public int layerOrder = 5;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -19,6 +20,24 @@ namespace Orion
         {
 
         }
+
+        public bool CheckIngredients()
+        {
+            if(ingredientsSpawned.Count >= 10 || ingredientsSpawned[ingredientsSpawned.Count - 1].ingredientName == "topBun")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void CompareToOrder()
+        {
+
+        }
+
     }
 }
 

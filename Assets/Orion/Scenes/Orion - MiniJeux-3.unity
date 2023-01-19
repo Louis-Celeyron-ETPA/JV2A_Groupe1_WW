@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientsSpawned: []
+  layerOrder: 5
 --- !u!4 &210948125
 Transform:
   m_ObjectHideFlags: 0
@@ -534,6 +535,7 @@ MonoBehaviour:
   - {fileID: 6125218606004326592, guid: 1d40685884e27394598e2bd8342db519, type: 3}
   buttonPrefab: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
   ingredientSpawner: {fileID: 102397300}
+  ingredientManager: {fileID: 210948124}
 --- !u!1 &705812015
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 629945649}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &705812018
@@ -857,7 +859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010391688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 1.11, z: -0.050366126}
+  m_LocalPosition: {x: -0.43, y: 1.11, z: -0.050366126}
   m_LocalScale: {x: 21.846645, y: 12.190624, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -965,6 +967,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1297014992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297014994}
+  - component: {fileID: 1297014993}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1297014993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297014992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directions:
+    left:
+      m_PersistentCalls:
+        m_Calls: []
+    right:
+      m_PersistentCalls:
+        m_Calls: []
+    down:
+      m_PersistentCalls:
+        m_Calls: []
+    up:
+      m_PersistentCalls:
+        m_Calls: []
+  pointsMorts:
+    horizontal:
+      m_PersistentCalls:
+        m_Calls: []
+    vertical:
+      m_PersistentCalls:
+        m_Calls: []
+  action:
+    onPressed:
+      m_PersistentCalls:
+        m_Calls: []
+    onUp:
+      m_PersistentCalls:
+        m_Calls: []
+    onStayed:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!4 &1297014994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297014992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 121.34808, y: 86.787796, z: -0.84581923}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1893301363
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,7 +1054,7 @@ GameObject:
   - component: {fileID: 1893301367}
   - component: {fileID: 1893301368}
   m_Layer: 0
-  m_Name: bottom_bun
+  m_Name: BottomBun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1200,6 +1276,18 @@ PrefabInstance:
     - target: {fileID: 4142041026204185984, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.5855287
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.6087736
       objectReference: {fileID: 0}
     - target: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

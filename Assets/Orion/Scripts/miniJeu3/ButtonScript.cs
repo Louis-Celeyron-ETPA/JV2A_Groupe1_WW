@@ -10,12 +10,13 @@ namespace Orion
     {
         public Ingredient assignedIngredient;
         public Transform spawner;
+        public Image img;
+        public IngredientManager ingredientManager;
 
     // Start is called before the first frame update
     void Start()
         {
-            GameObject img = transform.GetChild(0).gameObject;
-            img.GetComponent<Image>().sprite = assignedIngredient.ingredientSprite;
+            img.sprite = assignedIngredient.ingredientSprite;
         }
 
         // Update is called once per frame
@@ -27,7 +28,16 @@ namespace Orion
 
         public void IngredientSpawn()
         {
-            assignedIngredient.Instantiation(spawner.position);
+            Ingredient thisInstance = Instantiate(assignedIngredient, spawner.position, Quaternion.identity);
+            thisInstance.spriteRenderer.sortingOrder = ingredientManager.layerOrder;
+            ingredientManager.layerOrder++;
+            ingredientManager.ingredientsSpawned.Add(thisInstance);
+            Debug.Log(ingredientManager.ingredientsSpawned);
+            if (ingredientManager.CheckIngredients())
+            {
+                Debug.Log("compare");
+            }
+
 
         }
     }

@@ -24,12 +24,12 @@ namespace Orion
 
         }
 
-        public void Instantiation(Vector3 vector)
-        {
-            Ingredient thisInstance = Instantiate(prefab, vector, Quaternion.identity);
-            thisInstance.spriteRenderer.sortingOrder = IngredientManager.layerOrder;
-            IngredientManager.layerOrder++;
-        }
+        //public void Instantiation(Vector3 vector)
+        //{
+        //    Ingredient thisInstance = Instantiate(prefab, vector, Quaternion.identity);
+        //    thisInstance.spriteRenderer.sortingOrder = IngredientManager.layerOrder;
+        //    IngredientManager.layerOrder++;
+        //}
     }
 }
 
