@@ -13,10 +13,11 @@ namespace Gabriel
         public bool isCurrent;
         public Placer_Objet_1 next;
         public string tagToCollider;
+        public bool victoire;
         // Start is called before the first frame update
         void Start()
         {
-
+            victoire = false;
         }
 
         // Update is called once per frame
@@ -53,6 +54,11 @@ namespace Gabriel
             {
                 next.isCurrent = true;
                 isCurrent = false;
+
+                if (next.isCurrent == false)
+                {
+                    victoire = true;
+                }
             }
 
         }

@@ -21,14 +21,12 @@ namespace Gabriel
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKey(KeyCode.Space) == true)
-            {
-                shouldGo = true;
-            }
-            if(shouldGo)
-            {
-                boule_de_neige.position = boule_de_neige.position + Vector3.right * speed;
-            }
+
+        } 
+
+        public void MoveBoule()
+        {
+            boule_de_neige.position = boule_de_neige.position + Vector3.right * speed;
         } 
     }
 }

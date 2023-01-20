@@ -721,6 +721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rgbd: {fileID: 6681619390381860367}
   speed: 0.2
+  toucher: 0
 --- !u!1 &4210628223182715564
 GameObject:
   m_ObjectHideFlags: 0

@@ -180,7 +180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 613.2, y: 257}
+  m_AnchoredPosition: {x: 613.2, y: 278}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &17491051
@@ -295,6 +295,10 @@ MonoBehaviour:
   timeRemaining: 20
   timeIsRunning: 0
   timeText: {fileID: 17491051}
+  cV: {fileID: 1895027699}
+  whichGameImIn: 0
+  cL: {fileID: 0}
+  pO1: {fileID: 0}
 --- !u!1 &40625688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6868044469943390028, guid: d7601324b0613824990e5164a6d52fc7, type: 3}
@@ -4446,7 +4450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 773, y: -135}
+  m_AnchoredPosition: {x: 799, y: -135}
   m_SizeDelta: {x: 699.3105, y: 210.4951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1185158424
