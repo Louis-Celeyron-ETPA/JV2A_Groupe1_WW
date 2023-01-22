@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishSpawner : MonoBehaviour
+public class Lisa_FishSpawner : MonoBehaviour
 {
     public float nbToSpawn = 6;
 
@@ -20,14 +20,14 @@ public class FishSpawner : MonoBehaviour
         for (int i = 0; i < nbToSpawn; i++)
         {
             GameObject truc = Instantiate(prefabFish);
-            truc.transform.position = transform.position + new Vector3(Random.Range(leftLimit,rightLimit), Random.Range(botLimit, topLimit), 0);
+            truc.transform.position = transform.position + new Vector3(Random.Range(leftLimit, rightLimit), Random.Range(botLimit, topLimit), 0);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public float GetFishNumber()

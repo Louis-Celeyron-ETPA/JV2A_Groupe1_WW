@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RecupCarrot : MonoBehaviour
+public class Lisa_RecupCarrot : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class RecupCarrot : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<ScoreKeeper>().RaiseScore(1);
+            other.GetComponent<Lisa_ScoreKeeper>().RaiseScore(1);
             Destroy(gameObject);
         }
     }

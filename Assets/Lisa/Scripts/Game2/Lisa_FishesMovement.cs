@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishesMovement : MonoBehaviour
+public class Lisa_FishesMovement : MonoBehaviour
 {
     public float timeToChange { get { return (Random.Range(1f,3f)); } }
     private float time = 0f;

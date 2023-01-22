@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class Lisa_Spawner : MonoBehaviour
 {
     public float timeBetweenSpawn = 1.5f;
     private float time = 0;

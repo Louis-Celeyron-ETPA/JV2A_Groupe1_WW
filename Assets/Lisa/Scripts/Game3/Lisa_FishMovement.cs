@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-    public class FishMovement : MonoBehaviour
+    public class Lisa_FishMovement : MonoBehaviour
 {
 
     public float velocity = 2f;

@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BunnyMovement : MonoBehaviour
+public class Lisa_BunnyMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform move;
 
     float speed = 0.25f;
+
+    public float time = 0f;
+    public float MaxTime = 20f;
 
     void Start()
     {
@@ -26,6 +29,14 @@ public class BunnyMovement : MonoBehaviour
         {
             //move.position += move.forward;
             transform.localPosition += transform.right * -speed;
+        }
+
+        time += Time.deltaTime;
+
+        if (time > MaxTime)
+        {
+            //ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+            UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 }

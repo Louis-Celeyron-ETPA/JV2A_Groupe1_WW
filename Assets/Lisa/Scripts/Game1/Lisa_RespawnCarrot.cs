@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RespawnCarrot : MonoBehaviour
+public class Lisa_RespawnCarrot : MonoBehaviour
 {
-    public RecupCarrot carrotePrefab;
+    public Lisa_RecupCarrot carrotePrefab;
     public Transform[] spawnPoint;
     public float delay = 1;
     float timer = 0;

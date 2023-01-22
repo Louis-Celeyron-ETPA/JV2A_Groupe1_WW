@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HookMovement : MonoBehaviour
+public class Lisa_HookMovement : MonoBehaviour
 {
     public float speedHook = 0.05f;
 
     public float score = 0;
 
-    public FishSpawner fishSpawner;
+    public Lisa_FishSpawner fishSpawner;
 
     // Start is called before the first frame update
     void Start()
