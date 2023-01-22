@@ -6,6 +6,10 @@ public class HookMovement : MonoBehaviour
 {
     public float speedHook = 0.05f;
 
+    public float score = 0;
+
+    public FishSpawner fishSpawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,24 @@ public class HookMovement : MonoBehaviour
         {
             if (transform.position.y > -25)
                 transform.localPosition += transform.up * -speedHook;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Fish")
+        {
+            score += 1;
+            TestVictory();
+        }
+    }
+
+    private void TestVictory()
+    {
+        float value = fishSpawner.GetFishNumber();
+        if (score == value)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 }
