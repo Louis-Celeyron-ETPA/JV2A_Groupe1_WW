@@ -133,6 +133,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4142041026204185984, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
   m_PrefabInstance: {fileID: 703663630}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &11018471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
+  m_PrefabInstance: {fileID: 703663630}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11018468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &102397298
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130683001}
   m_LocalRotation: {x: -0, y: -0, z: 0.39667082, w: 0.917961}
-  m_LocalPosition: {x: -7.27, y: 0.30646685, z: 0.79111224}
+  m_LocalPosition: {x: -7.303, y: 0.337, z: 0.79111224}
   m_LocalScale: {x: 1, y: 0.1125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -430,6 +441,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &297544116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297544118}
+  - component: {fileID: 297544117}
+  m_Layer: 0
+  m_Name: ButtonSelection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &297544117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297544116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2760f399c237e8e43abc8db01c00d362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonList:
+  - {fileID: 11018471}
+  - {fileID: 639561426}
+  - {fileID: 1909033902}
+  - {fileID: 1778258743}
+--- !u!4 &297544118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297544116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.3281267, y: 3.863162, z: 0.7564795}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &331668588
 GameObject:
@@ -733,6 +793,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4142041026204185984, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
   m_PrefabInstance: {fileID: 1401372621}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &639561426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
+  m_PrefabInstance: {fileID: 1401372621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &703663630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1824,6 +1895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1297014994}
   - component: {fileID: 1297014993}
+  - component: {fileID: 1297014995}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -1838,7 +1910,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297014992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
   m_Name: 
@@ -1846,10 +1918,34 @@ MonoBehaviour:
   directions:
     left:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 297544117}
+          m_TargetAssemblyTypeName: Orion.ButtonSelection, Assembly-CSharp
+          m_MethodName: SelectLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     right:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 297544117}
+          m_TargetAssemblyTypeName: Orion.ButtonSelection, Assembly-CSharp
+          m_MethodName: SelectRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     down:
       m_PersistentCalls:
         m_Calls: []
@@ -1866,7 +1962,19 @@ MonoBehaviour:
   action:
     onPressed:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 297544117}
+          m_TargetAssemblyTypeName: ButtonSelection, Assembly-CSharp
+          m_MethodName: ClickButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onUp:
       m_PersistentCalls:
         m_Calls: []
@@ -1888,6 +1996,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1297014995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297014992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1185da0560741f846ad4d1ca9b50c412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonSelection: {fileID: 297544117}
 --- !u!1001 &1401372621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2290,6 +2411,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1778258743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
+  m_PrefabInstance: {fileID: 1430395793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1788470262 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4142041026204185984, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
@@ -2428,6 +2560,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.132206, y: 1.4608989}
   m_EdgeRadius: 0
+--- !u!114 &1909033902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4142041026204185985, guid: 632a3a65caa5ae34cbfc0311824b57aa, type: 3}
+  m_PrefabInstance: {fileID: 1111613843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1947373548
 GameObject:
   m_ObjectHideFlags: 0
