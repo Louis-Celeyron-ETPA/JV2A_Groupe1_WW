@@ -56,7 +56,7 @@ namespace Orion
                 }
             }
 
-            myTransform.position += direction * currentEnemySpeed;
+            myTransform.position += direction * currentEnemySpeed * Time.deltaTime;
 
         }
     }

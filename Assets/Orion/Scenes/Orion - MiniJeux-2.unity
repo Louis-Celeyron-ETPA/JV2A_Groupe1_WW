@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myTransform: {fileID: 484441294}
   ball: {fileID: 721466570}
-  rotateValue: 1.3
+  rotateValue: 200
 --- !u!4 &484441294
 Transform:
   m_ObjectHideFlags: 0
@@ -451,7 +451,6 @@ GameObject:
   - component: {fileID: 721466567}
   - component: {fileID: 721466569}
   - component: {fileID: 721466568}
-  - component: {fileID: 721466571}
   - component: {fileID: 721466570}
   m_Layer: 0
   m_Name: Ball
@@ -581,60 +580,6 @@ MonoBehaviour:
   throwingForce: 660
   touchedGround: 0
   cam: {fileID: 163879711}
---- !u!114 &721466571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721466565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  directions:
-    left:
-      m_PersistentCalls:
-        m_Calls: []
-    right:
-      m_PersistentCalls:
-        m_Calls: []
-    down:
-      m_PersistentCalls:
-        m_Calls: []
-    up:
-      m_PersistentCalls:
-        m_Calls: []
-  pointsMorts:
-    horizontal:
-      m_PersistentCalls:
-        m_Calls: []
-    vertical:
-      m_PersistentCalls:
-        m_Calls: []
-  action:
-    onPressed:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 721466570}
-          m_TargetAssemblyTypeName: Orion.BallMovements, Assembly-CSharp
-          m_MethodName: Throw
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    onUp:
-      m_PersistentCalls:
-        m_Calls: []
-    onStayed:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &885611455
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,8 +754,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954154518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.52, y: -4.92, z: 0}
-  m_LocalScale: {x: 60.39821, y: 1.6756023, z: 1}
+  m_LocalPosition: {x: 4.52, y: -9.1, z: 0}
+  m_LocalScale: {x: 60.39821, y: 10.213215, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1220,6 +1165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rd: {fileID: 1267360520}
   ejectingForce: 900
+  isEjected: 0
 --- !u!1 &1743378494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,8 +1175,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1743378495}
+  - component: {fileID: 1743378496}
   m_Layer: 0
-  m_Name: manager
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1250,4 +1197,105 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1743378496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743378494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a2fef4bcddc5c46beb6ef2efd5b83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballMovements: {fileID: 721466570}
+  ballCollider: {fileID: 1267360521}
+  _perfectTimeLimit: 10
+--- !u!1 &2131332612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131332614}
+  - component: {fileID: 2131332613}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2131332613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131332612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ad937c589ee941943ab66a6ff27ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directions:
+    left:
+      m_PersistentCalls:
+        m_Calls: []
+    right:
+      m_PersistentCalls:
+        m_Calls: []
+    down:
+      m_PersistentCalls:
+        m_Calls: []
+    up:
+      m_PersistentCalls:
+        m_Calls: []
+  pointsMorts:
+    horizontal:
+      m_PersistentCalls:
+        m_Calls: []
+    vertical:
+      m_PersistentCalls:
+        m_Calls: []
+  action:
+    onPressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 721466570}
+          m_TargetAssemblyTypeName: Orion.BallMovements, Assembly-CSharp
+          m_MethodName: Throw
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onUp:
+      m_PersistentCalls:
+        m_Calls: []
+    onStayed:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!4 &2131332614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131332612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.28008813, y: 0.14902401, z: 0.07167566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

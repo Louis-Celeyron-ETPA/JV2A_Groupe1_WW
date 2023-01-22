@@ -35,27 +35,14 @@ namespace Orion
         {
             if (airLeft > 0)
             {
-                myTransform.position += Vector3.up * upSpeed;
+                myTransform.position += Vector3.up * upSpeed * Time.deltaTime;
                 airLeft -= airConsumption;
             }
         }
         void Update()
         {
-            myTransform.position += Vector3.right * scrollSpeed;
-            myTransform.position -= Vector3.up * downSpeed;
-
-
-            if (Input.GetKey(KeyCode.Space) && airLeft > 0f)
-            {
-                myTransform.position += Vector3.up * upSpeed;
-                airLeft -= airConsumption;
-            }
-            else
-            {
-                myTransform.position -= Vector3.up * downSpeed;
-            }
-
-            myTransform.position -= Vector3.up * downSpeed;
+            //myTransform.position += Vector3.right * scrollSpeed;
+            myTransform.position -= Vector3.up * downSpeed * Time.deltaTime;
 
             if (airLeft <= 0)
             {

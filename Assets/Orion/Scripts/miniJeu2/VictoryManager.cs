@@ -4,12 +4,13 @@ using UnityEngine;
 
 namespace Orion
 {
-
-    public class Manager : MonoBehaviour
+    public class VictoryManager : MonoBehaviour
     {
-        public Timer myTimer;
-        public Movements myMovements;
-        public float successTimeLimit = 7f;
+        public BallMovements ballMovements;
+        public BallCollider ballCollider;
+        private float _currentTime;
+        [SerializeField]
+        private float _perfectTimeLimit;
         private bool _ended = false;
 
         // Start is called before the first frame update
@@ -21,28 +22,36 @@ namespace Orion
         // Update is called once per frame
         void Update()
         {
-            if (!_ended && !myMovements.isDeflated && myTimer.gameFinished)
+            _currentTime += Time.deltaTime;
+
+            if(ballMovements.isThrown && ballMovements.touchedGround && !_ended)
+            {
+                CheckVictory();
+            }
+
+        }
+
+        private void CheckVictory()
+        {
+            if (ballCollider.isEjected && _currentTime <= _perfectTimeLimit)
             {
                 _ended = true;
                 Debug.Log("perfect");
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
             }
-            else if (!_ended && myMovements.isDeflated && myTimer.currentTime >= successTimeLimit)
+            else if (ballCollider.isEjected && _currentTime > _perfectTimeLimit) 
             {
                 _ended = true;
                 Debug.Log("success");
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+
             }
-            else if(!_ended && myMovements.isDeflated && myTimer.currentTime <= successTimeLimit)
+            else
             {
                 _ended = true;
                 Debug.Log("fail");
                 ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
             }
-        
         }
-
     }
 }
-
-

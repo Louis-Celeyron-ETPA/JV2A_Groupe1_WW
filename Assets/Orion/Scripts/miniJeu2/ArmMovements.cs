@@ -22,7 +22,7 @@ namespace Orion
         {
             if (!ball.isThrown)
             {
-                myTransform.Rotate(new Vector3(0, 0, rotateValue));
+                myTransform.Rotate(new Vector3(0, 0, rotateValue * Time.deltaTime));
                 if (myTransform.rotation.eulerAngles.z >= 90f)
                 {
                     rotateValue = rotateValue * -1f;

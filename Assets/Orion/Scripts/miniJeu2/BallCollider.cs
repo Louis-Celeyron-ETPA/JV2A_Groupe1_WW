@@ -9,6 +9,7 @@ namespace Orion
         // Start is called before the first frame update
         public Rigidbody2D rd;
         public float ejectingForce = 1f;
+        public bool isEjected = false;
         void Start()
         {
 
@@ -28,6 +29,8 @@ namespace Orion
                 if (!MovementsColliding.touchedGround)
                 {
                     rd.AddForce(new Vector3(1f,0.9f,0f) * ejectingForce);
+                    isEjected = true;
+
                 }
             }
 
