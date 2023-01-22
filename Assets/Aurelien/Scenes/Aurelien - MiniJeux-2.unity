@@ -2289,12 +2289,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMax: 1000
-  myKey: 32
+  myKey: 0
   thierry: {fileID: 47725797}
   rgbd: {fileID: 47725793}
   IsFired: 0
-  power: 80000
-  powerMax: 80000
+  power: 2e+9
+  powerMax: 2e+9
   valeurJauge: {fileID: 1165349796}
 --- !u!1 &48517426
 GameObject:
@@ -51158,10 +51158,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barre: {fileID: 1165349792}
   stop: 0
-  top: {x: 80.3999, y: 78.3, z: -1125}
-  bot: {x: 80.3999, y: 23.6, z: -1168.1}
+  top: {x: 0, y: 0, z: 0}
+  bot: {x: 0, y: 0, z: 0}
   pourcentage: 0
-  speed: 0.55
+  speed: 1
 --- !u!1 &1165552717
 GameObject:
   m_ObjectHideFlags: 0
