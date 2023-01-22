@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 namespace Orion
 {
-    //On peut disable ce script ou l'Input Manager pour tester le mini jeu sur pc car la navigation dans l'ui est déjà prévue de base dans Unity,
-    //Mais du coup comme le jeu est prévu pour arcade et que je sais pas exactement comment fonctionne l'Input Manager, j'ai recréé des fonctions pour naviguer entre les boutons de l'ui et je les aies mises sur l'input manager comme demandé.
+    //On peut disable ce script ou l'Input Manager pour tester le mini jeu sur pc car la navigation et l'interaction dans l'ui est déjà prévue de base dans Unity,
+    //Mais du coup comme le jeu est prévu pour arcade et que je sais pas comment fonctionne l'Input Manager, j'ai recréé des fonctions pour naviguer entre les boutons de l'ui et je les aies mises sur l'input manager comme demandé.
     //Donc j'ai testé en mettant les fonctions sur des inputs différents (TestInput) et ça marche, mais si on teste sur pc et qu'on clique sur un bouton à la souris, ça va faire les actions en double car l'input d'action de l'input manager est sur le clic de la souris aussi.
 
     public class ButtonSelection : MonoBehaviour

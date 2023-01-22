@@ -32,12 +32,10 @@ namespace Orion
             thisInstance.spriteRenderer.sortingOrder = ingredientManager.layerOrder;
             ingredientManager.layerOrder++;
             ingredientManager.ingredientsSpawned.Add(thisInstance);
-            Debug.Log(ingredientManager.ingredientsSpawned);
             if (ingredientManager.CheckIngredients())
             {
-                Debug.Log("compare");
+                ingredientManager.CompareToOrder();
             }
-
 
         }
     }
