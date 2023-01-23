@@ -6,6 +6,7 @@ namespace Orion
 {
     public class ColliderEnemy : MonoBehaviour
     {
+        public SpriteRenderer spriteRenderer;
         // Start is called before the first frame update
         void Start()
         {
@@ -15,12 +16,19 @@ namespace Orion
         // Update is called once per frame
         void Update()
         {
-
+            if(transform.position.x <= 0f)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                spriteRenderer.flipX = false;
+            }
         }
 
-        public void OnTriggerEnter2D(Collider2D other)
+        public void OnCollisionEnter2D(Collision2D other)
         {
-            Movements MovementsColliding = other.GetComponent<Movements>();
+            Movements MovementsColliding = other.gameObject.GetComponent<Movements>();
             if (MovementsColliding != null)
             {
                 MovementsColliding.isDeflated = true;

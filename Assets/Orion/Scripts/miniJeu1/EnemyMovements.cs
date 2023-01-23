@@ -9,7 +9,9 @@ namespace Orion
     {
         public Transform myTransform;
         public Transform balloonTransform;
+
         public Vector3 direction;
+        public Vector2 cooldownDirection;
 
         public float currentTime = 0f;
         public float timeMax = 2f;
@@ -17,14 +19,19 @@ namespace Orion
         public float currentEnemySpeed = 2f;
         public float cooldownTime = 1f;
         public float cooldownSpeed = 1f;
+        public float radius = 20f;
 
-        public bool cooldown = false;
+        public bool cooldown = true;
+
+        private Vector2 _initialPosition;
 
         // Start is called before the first frame update
         void Start()
         {
-            direction = balloonTransform.position - myTransform.position;
-            direction = direction.normalized;
+            _initialPosition = myTransform.position;
+            ChangeCooldownDirection();
+            ChangeFocusDirection();
+
         }
 
         // Update is called once per frame
@@ -35,10 +42,19 @@ namespace Orion
             if (cooldown)
             {
 
-                currentEnemySpeed = baseEnemySpeed * cooldownSpeed; 
+                currentEnemySpeed = baseEnemySpeed * cooldownSpeed;
+
+                myTransform.position = Vector2.MoveTowards(myTransform.position, cooldownDirection, currentEnemySpeed * Time.deltaTime);
+
+                if (Vector3.Distance(cooldownDirection, myTransform.position) <= 0.1f)
+                {
+                    ChangeCooldownDirection();
+                }
 
                 if (currentTime >= cooldownTime)
                 {
+                    direction = balloonTransform.position - myTransform.position;
+                    direction = direction.normalized;
                     cooldown = false;
                     currentTime = 0f;
                 }
@@ -47,17 +63,28 @@ namespace Orion
             {
                 currentEnemySpeed = baseEnemySpeed;
 
+                myTransform.position += currentEnemySpeed * Time.deltaTime * direction;
+
                 if (currentTime >= timeMax)
                 {
-                    direction = balloonTransform.position - myTransform.position;
-                    direction = direction.normalized;
+                    _initialPosition = myTransform.position;
+                    ChangeCooldownDirection();
+                    ChangeFocusDirection();
                     cooldown = true;
                     currentTime = 0f;
                 }
             }
+        }
 
-            myTransform.position += direction * currentEnemySpeed * Time.deltaTime;
+        public void ChangeCooldownDirection()
+        {
+            cooldownDirection = _initialPosition + Random.insideUnitCircle * radius;
+        }
 
+        public void ChangeFocusDirection()
+        {
+            direction = balloonTransform.position - myTransform.position;
+            direction = direction.normalized;
         }
     }
 }

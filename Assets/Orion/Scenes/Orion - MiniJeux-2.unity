@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myTransform: {fileID: 484441294}
   ball: {fileID: 721466570}
-  rotateValue: 200
+  rotateValue: 150
 --- !u!4 &484441294
 Transform:
   m_ObjectHideFlags: 0

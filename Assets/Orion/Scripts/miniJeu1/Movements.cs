@@ -14,7 +14,6 @@ namespace Orion
         public float upSpeed = 1f;
         public float downSpeed = 1f;
         public float scrollSpeed = 1f;
-        public float deflatingScrollSpeed = 1f;
         public float deflatingDownSpeed = 1f;
 
 
@@ -41,7 +40,6 @@ namespace Orion
         }
         void Update()
         {
-            //myTransform.position += Vector3.right * scrollSpeed;
             myTransform.position -= Vector3.up * downSpeed * Time.deltaTime;
 
             if (airLeft <= 0)
@@ -55,7 +53,6 @@ namespace Orion
 
                 spriteRenderer.sprite = newSprite;
                 downSpeed = downSpeed * deflatingDownSpeed;
-                scrollSpeed = scrollSpeed * deflatingScrollSpeed;
                 deflationDone = true;
             }
         }
