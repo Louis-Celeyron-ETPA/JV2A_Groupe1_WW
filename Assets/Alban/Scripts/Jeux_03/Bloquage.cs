@@ -22,7 +22,7 @@ namespace Alban
         private void OnTriggerEnter(Collider other)
         {
 
-            var timer03 = FindObjectOfType<Timer_03>();
+            var timer03 = FindObjectOfType<Timer_JeuxBouche>();
 
             if (other.tag == "Bad")
             {

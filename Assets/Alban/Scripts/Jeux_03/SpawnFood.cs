@@ -14,7 +14,7 @@ namespace Alban
 
         public IEnumerator SpawnerFood()
         {
-            var timeIsRunning = FindObjectOfType<Timer_03>().timeIsRunning;
+            var timeIsRunning = FindObjectOfType<Timer_JeuxBouche>().timeIsRunning;
             while (timeIsRunning == true)
             {
                 yield return new WaitForSeconds(1);

@@ -21,7 +21,7 @@ namespace Alban
         void Update()
         {
 
-            var timer03 = FindObjectOfType<Timer_03>();
+            var timer03 = FindObjectOfType<Timer_JeuxBouche>();
 
             Nourriture.position += Nourriture.right * speedMax;
 

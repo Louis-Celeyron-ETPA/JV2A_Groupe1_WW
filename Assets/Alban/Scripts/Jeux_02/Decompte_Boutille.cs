@@ -23,7 +23,7 @@ namespace Alban
 
             if (bottleRemaining == 0)
             {
-                Debug.LogError("Victoire !");
+                Debug.LogError("PARFAIT !");
             }
 
             NombreBouteilleRestante.text = "Bouteilles Restantes : " + bottleRemaining;
