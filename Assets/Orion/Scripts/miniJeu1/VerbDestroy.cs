@@ -6,7 +6,7 @@ namespace Orion
 {
     public class VerbDestroy : MonoBehaviour
     {
-        public Timer timer;
+        private float time;
 
         // Start is called before the first frame update
         void Start()
@@ -17,7 +17,8 @@ namespace Orion
         // Update is called once per frame
         void Update()
         {
-            if(timer.currentTime>= 1.5f)
+            time += Time.deltaTime;
+            if(time>= 1.5f)
             {
                 Destroy(this.gameObject);
             }
