@@ -1891,7 +1891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: []
-  ingredientNumber: 5
+  ingredientNumber: 3
   _ingredientImage: {fileID: 3195957158581032122, guid: f70a6fafcdfff9c4e8c472ab6e4741ff, type: 3}
   _ingredientImageParent: {fileID: 187824820}
   _topBun: {fileID: 1587873444}
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297014992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1185da0560741f846ad4d1ca9b50c412, type: 3}
   m_Name: 

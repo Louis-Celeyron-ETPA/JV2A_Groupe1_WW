@@ -57,11 +57,11 @@ namespace Orion
                     direction = direction.normalized;
                     cooldown = false;
                     currentTime = 0f;
+                    currentEnemySpeed = baseEnemySpeed;
                 }
             }
             else
             {
-                currentEnemySpeed = baseEnemySpeed;
 
                 myTransform.position += currentEnemySpeed * Time.deltaTime * direction;
 
