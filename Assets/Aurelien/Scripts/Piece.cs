@@ -4,9 +4,12 @@ using UnityEngine;
 
 namespace Aurelien
 {
-
-    public class Collision : MonoBehaviour
+    public class Piece : MonoBehaviour
     {
+
+        public Transform piece;
+        public TextMesh Pieces;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -21,9 +24,13 @@ namespace Aurelien
 
         private void OnTriggerEnter(Collider other)
         {
-            Destroy(gameObject);
+            var scoreKeeper = FindObjectOfType<DecomptePiece>();
+
+            if (scoreKeeper != null)
+            {
+                scoreKeeper.Truc();
+                Destroy(gameObject);
+            }
         }
     }
-
 }
-

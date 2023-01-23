@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Aurelien
 {
-    public class lights : MonoBehaviour
+    public class Lights : MonoBehaviour
     {
         public Transform lumiere;
         public bool dirGauche = false;
