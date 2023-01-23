@@ -33,20 +33,6 @@ namespace Hugo
         void Update()
         {
 
-            if (Input.GetKey(KeyCode.D) == true)
-            {
-                tempSpeedX += acceleration;
-                tempSpeedX = Mathf.Clamp(tempSpeedX, 0, speedMax);
-                currentTetromino.transform.position += Vector3.right * tempSpeedX;
-            }
-
-            if (Input.GetKey(KeyCode.Q) == true)
-            {
-                tempSpeedX += acceleration;
-                tempSpeedX = Mathf.Clamp(tempSpeedX, speedMax, 0);
-                currentTetromino.transform.position += Vector3.left * tempSpeedX;
-            }
-
         }
 
 
@@ -92,6 +78,19 @@ namespace Hugo
             GenerateTetromino();
         }
 
+        public void Left()
+        {
+            tempSpeedX += acceleration;
+            tempSpeedX = Mathf.Clamp(tempSpeedX, speedMax, 0);
+            currentTetromino.transform.position += Vector3.left * tempSpeedX;     
+        }
+
+        public void Right()
+        {
+            tempSpeedX += acceleration;
+            tempSpeedX = Mathf.Clamp(tempSpeedX, 0, speedMax);
+            currentTetromino.transform.position += Vector3.right * tempSpeedX;
+        }
 
     }
 }
