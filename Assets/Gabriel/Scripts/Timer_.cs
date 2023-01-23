@@ -46,17 +46,20 @@ namespace Gabriel
             {
                 if (seconds < 0)
                 {
-                    if (cV.monScore > 14)
+                    if (cV.monScore > 14 && timeRemaining <= 0)
                     {
                         ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
+                        Debug.LogError("Parfait !");
                     }
-                    else if (cV.monScore < 7)
+                    else if (cV.monScore < 7 && timeRemaining <= 0)
                     {
                         ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+                        Debug.LogError("Dommage...");
                     }
                     else
                     {
                         ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+                        Debug.LogError("Bravo !");
                     }
                 }
             }
@@ -65,17 +68,20 @@ namespace Gabriel
             {
                 if (seconds < 0)
                 {
-                    if (cL.monScore > 9)
+                    if (cL.monScore > 9 && timeRemaining <= 0)
                     {
                         ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Perfect);
+                        Debug.LogError("Parfait !");
                     }
-                    else if (cL.monScore < 5)
+                    else if (cL.monScore < 5 && timeRemaining <= 0)
                     {
                         ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+                        Debug.LogError("Dommage...");
                     }
                     else
                     {
                         ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+                        Debug.LogError("Bravo !");
                     }
                 }
             }
@@ -85,11 +91,12 @@ namespace Gabriel
                 if (seconds < 0)
                 {
                     ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Fail);
+                    Debug.LogError("Dommage...");
                 }
-                Debug.Log("Prout");
                 if (pO1.victoire == true)
                 {
                     ManagerManager.GlobalGameManager.EndOfMinigame(MinigameRating.Success);
+                    Debug.LogError("Bravo !");
                 }
             }
         }
